@@ -9,7 +9,7 @@ const Navbar = () => {
             HOME
           </a>
           <a href="#" className="hover:text-gray-400 px-4 border-r border-gray-400 h-full flex items-center">
-            ABOUT
+            ABOUT US
           </a>
           <a href="#" className="hover:text-gray-400 px-4 border-r border-gray-400 h-full flex items-center">
             OUR SERVICES
