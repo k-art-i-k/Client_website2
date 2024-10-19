@@ -47,12 +47,12 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full text-black z-50 transition-colors duration-300 ${
+      className={`fixed top-0 left-0 w-full text-white z-50 transition-colors duration-300 ${
         isHeroVisible && location.pathname === "/" ? "bg-transparent" : "bg-white"
       }`}
     >
       {/* Upper menu */}
-      <div className="flex items-center h-16 hidden md:flex">
+      <div className="flex  bg-indigo-900 items-center h-16 hidden md:flex">
         <nav className="w-full flex justify-center space-x-6">
           <Link
             to="/"
@@ -85,7 +85,7 @@ const Navbar = () => {
       </div>
 
       {/* Main navbar */}
-      <div className="flex justify-between items-center h-auto md:h-24 p-4 shadow-lg">
+      <div className="flex justify-between items-center  bg-slate-100 h-auto md:h-24 p-4 shadow-lg">
         <div className="flex items-center">
           <img src={logo} alt="Company Logo" className="h-16 md:h-32 md:ml-32" />
         </div>
@@ -99,13 +99,13 @@ const Navbar = () => {
 
         {/* Contact info for desktop */}
         <div className="hidden md:flex items-center space-x-4 mr-16">
-          <div className="flex items-center bg-red-600 rounded-full p-2 md:p-3">
-            <FontAwesomeIcon icon={faPhone} className="text-white mr-2" />
-            <p className="text-white text-sm md:text-lg">Phone: (123) 456-7890</p>
+          <div className="flex items-center bg-indigo-900 rounded-full p-2 md:p-3">
+            <FontAwesomeIcon icon={faPhone} className="text-amber-300 mr-2" />
+            <p className="text-amber-300 text-sm md:text-lg">Phone: (123) 456-7890</p>
           </div>
-          <div className="flex items-center bg-red-600 rounded-full p-2 md:p-3">
-            <FontAwesomeIcon icon={faEnvelope} className="text-white mr-2" />
-            <p className="text-white text-sm md:text-lg">Email: info@company.com</p>
+          <div className="flex items-center bg-indigo-900 rounded-full p-2 md:p-3">
+            <FontAwesomeIcon icon={faEnvelope} className="text-amber-300 mr-2" />
+            <p className="text-amber-300 text-sm md:text-lg">Email: info@company.com</p>
           </div>
         </div>
       </div>
