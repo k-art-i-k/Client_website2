@@ -4,6 +4,8 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Footer1 from './components/Footer1'
+import ServicesPage from './pages/ServicePage';
 // import Services from './pages/Services';
 // import Contact from './pages/Contact';
 // import Tracking from './pages/Tracking';
@@ -19,13 +21,13 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<ServicesPage />} />
+          {/* <Route path="/contact" element={<Contact />} />
           <Route path="/tracking" element={<Tracking />} /> */}
         </Routes>
       </div>
 
-     
+     <Footer1/>
       <Footer />
     </Router>
   );

@@ -1,11 +1,15 @@
 import React from 'react';
+import HeroSection from '../components/HeroSection'
+import Services from '../components/Services'
+import CompanySection from '../components/CompanySection';
 
 const Home = () => {
   return (
-    <div className="text-center p-8">
-      <h1 className="text-3xl font-bold">Welcome to our Homepage</h1>
-      <p>We offer the best services in the industry.</p>
-    </div>
+    <>
+    <HeroSection/>
+    <Services/>
+    <CompanySection/>
+    </>
   );
 };
 
