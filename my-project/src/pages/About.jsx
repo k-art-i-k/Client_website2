@@ -23,7 +23,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="font-roboto">
+    <div className="font-roboto mt-20 md:mt-36">
       <div className="relative">
         <img
           alt="Yellow truck with company logo"

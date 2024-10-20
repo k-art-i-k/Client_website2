@@ -73,7 +73,7 @@ const ServicesPage = () => {
   const [selectedService, setSelectedService] = useState(services[0]);
 
   return (
-    <div className="container mx-auto p-4 mt-36">
+    <div className="container mx-auto p-4 mt-20 md:mt-36">
       {/* Top Image Section */}
       <div className="relative mb-12">
         <img
