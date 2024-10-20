@@ -18,7 +18,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden " id="hero-section">
+    <div className="relative w-full h-screen overflow-hidden mt-20 md:mt-36" id="hero-section">
       <Slider {...settings}>
         {/* Slide 1 */}
         <div>
