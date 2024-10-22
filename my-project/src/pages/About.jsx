@@ -32,13 +32,22 @@ const AboutUs = () => {
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-4">
                 Get to know about{" "}
-                <em className="text-indigo-600 font-bold">our company</em>
+                <em className="text-indigo-600 font-bold">V Win Express Intl</em>
               </h2>
               <p className="mt-4 sm:mt-6 text-gray-500 text-sm sm:text-base md:text-lg leading-relaxed">
-                Our vast array of express delivery solutions can solve any
-                challenge posed by today’s changing business environments.
-                Innovation, reliability, and providing superior service quality
-                are our main goals.
+              Our vast array of express delivery solutions can solve any
+                  challenge posed by today’s changing business environments. We
+                  believe in innovation, reliability, and providing superior
+                  service quality at all times. With strategic partnerships, we
+                  are able to cover global destinations with the passing of
+                  every single day. Our vision to provide a committed service
+                  enables us to carry on and achieve a prized customer list that
+                  will bear testimony to our exceptional service. Our services
+                  are flexible enough to accommodate any special requirements of
+                  our customers. We are fully aware of the sensitive nature of
+                  our customer’s consignments/documents in terms of secrecy,
+                  safety, and speed of delivery. For us, every customer is a
+                  special project to be handled with utmost professionalism.
               </p>
             </div>
 

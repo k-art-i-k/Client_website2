@@ -21,7 +21,7 @@ const CompanySection = () => {
             Who we are
           </h2>
           <h1 className="mt-2 text-xl font-bold leading-tight text-white sm:text-2xl md:text-4xl">
-            Get to know about <span className="text-blue-400">our company</span>
+            Get to know about <span className="text-blue-400">V Win Express International</span>
           </h1>
           <p className="mt-4 text-xs text-white sm:text-sm md:text-lg md:max-w-xl max-w-sm">
             Our Portfolio includes many businesses & trading companies, big, medium, and small-sized industrial houses who have come to rely on our exceptional express courier services.

@@ -1,5 +1,6 @@
 import React from 'react';
 import tracking from '../assets/Banner_tracking.jpg';
+import location from '../assets/location_tracking6.jpg';
 
 const TrackingPage = () => {
   return (
@@ -9,8 +10,8 @@ const TrackingPage = () => {
         {/* Banner Image */}
         <img
           alt="Illustration of a delivery truck with a map and location pins indicating tracking"
-          className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover opacity-50"
-          src={tracking}
+          className="w-full h-[250px] sm:h-[250px] md:h-[350px] lg:h-[450px] opacity-60"
+          src={location}
           width={1920}
           height={600}
         />
@@ -19,7 +20,7 @@ const TrackingPage = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
             Track
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl">
+          <p className="text-sm sm:text-base md:text-xl lg:text-2xl font-bold">
             Track Your Shipment
           </p>
         </div>
@@ -71,8 +72,8 @@ const TrackingPage = () => {
               <div className="flex justify-center mt-4">
                 {" "}
                 {/* Added this wrapper div */}
-                <button className="w-1/3 md:w-1/4 bg-indigo-600 text-white py-2 rounded-full text-md md:text-lg font-semibold">
-                  TRACK
+                <button className="w-1/3 md:w-1/3 bg-indigo-600 text-white py-2 rounded-full text-md md:text-base font-semibold">
+                  TRACK ORDER
                 </button>
               </div>
             </div>

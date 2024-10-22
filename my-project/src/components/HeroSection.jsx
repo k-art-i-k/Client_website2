@@ -18,7 +18,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden mt-20 md:mt-36" id="hero-section">
+    <div className="relative w-full  overflow-hidden mt-20 md:mt-36" id="hero-section">
       <Slider {...settings}>
         {/* Slide 1 */}
         <div>
@@ -26,7 +26,7 @@ const HeroCarousel = () => {
             <img
               src={Image1}
               alt="VWIN Express Truck"
-              className="w-full h-screen object-cover"
+              className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
             />
             <div className="absolute top-1/4 left-8 sm:left-16 text-white">
               <h6 className="text-sm sm:text-lg font-semibold">
@@ -53,7 +53,7 @@ const HeroCarousel = () => {
             <img
               src={Image2}
               alt="Global Reach and Local Expertise"
-              className="w-full h-screen object-cover"
+              className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
             />
             <div className="absolute top-1/4 left-8 sm:left-16 text-white">
               <h6 className="text-sm sm:text-lg font-semibold">

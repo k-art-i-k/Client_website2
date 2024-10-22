@@ -73,13 +73,13 @@ const ServicesPage = () => {
   const [selectedService, setSelectedService] = useState(services[0]);
 
   return (
-    <div className="container mx-auto p-4 mt-20 md:mt-36">
+    <div className="font-roboto mt-20 md:mt-36">
       {/* Top Image Section */}
       <div className="relative mb-12">
         <img
           src={Image1} // Replace with the actual path to the top image
           alt="Our Services"
-          className="w-full h-80 object-cover"
+          className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
         />
         <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white">
           <h1 className="text-5xl font-bold">Our Services</h1>
@@ -88,9 +88,9 @@ const ServicesPage = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col p-4 md:p-8 lg:flex-row gap-8 mb-12">
         {/* Service List */}
-        <div className="flex-shrink-0 w-full lg:w-1/3">
+        <div className="flex-shrink-0 w-full lg:w-5/12">
           <ul className="space-y-4">
             {services.map((service) => (
               <li key={service.id}>
@@ -98,9 +98,9 @@ const ServicesPage = () => {
                   onClick={() => setSelectedService(service)}
                   className={`w-full text-left px-6 py-3 rounded-md shadow-lg ${
                     selectedService.id === service.id
-                      ? "bg-blue-600 text-white"
-                      : "bg-blue-200 text-blue-800"
-                  } hover:bg-blue-500 hover:text-white transition-colors duration-200`}
+                      ? "bg-indigo-900 text-white"
+                      : "bg-indigo-200 text-indigo-900"
+                  } hover:bg-indigo-900 hover:text-white transition-colors duration-200`}
                 >
                   {service.name}
                 </button>
