@@ -8,6 +8,8 @@ import Footer1 from './components/Footer1'
 import ServicesPage from './pages/ServicePage';
 import Contact from './pages/Contact';
 import Tracking from './pages/Tracking';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Contact1 from './components/Contact/Contact'
 
 const App = () => {
   return (
@@ -23,6 +25,9 @@ const App = () => {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<Contact />} />
            <Route path="/tracking" element={<Tracking />} /> 
+           <Route path="/privacy-policy" element={<PrivacyPolicy/>} /> 
+           <Route path='/contact1' element={<Contact1/>}/>
+           
         </Routes>
       </div>
 

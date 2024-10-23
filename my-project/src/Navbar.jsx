@@ -87,7 +87,7 @@ const Navbar = () => {
       {/* Main navbar */}
       <div className="flex justify-between items-center  bg-slate-100 h-auto md:h-24 p-4 shadow-lg">
         <div className="flex items-center">
-          <img src={logo} alt="Company Logo" className="h-16 md:h-28 md:ml-24" />
+          <img src={logo} alt="Company Logo" className="h-16 md:h-24 md:ml-36" />
         </div>
 
         {/* Hamburger menu for mobile */}
@@ -99,13 +99,13 @@ const Navbar = () => {
 
         {/* Contact info for desktop */}
         <div className="hidden md:flex items-center space-x-4 mr-4">
-          <div className="flex items-center bg-indigo-900 rounded-full p-2 md:p-3">
+          <div className="flex items-center bg-indigo-900 rounded-full p-2 md:p-4">
             <FontAwesomeIcon icon={faPhone} className="text-amber-300 mr-2" />
-            <p className="text-amber-300 text-sm md:text-lg">Phone: (123) 456-7890</p>
+            <p className="text-white text-sm md:text-base">Phone: (123) 456-7890</p>
           </div>
-          <div className="flex items-center bg-indigo-900 rounded-full p-2 md:p-3">
+          <div className="flex items-center bg-indigo-900 rounded-full p-2 md:p-4">
             <FontAwesomeIcon icon={faEnvelope} className="text-amber-300 mr-2" />
-            <p className="text-amber-300 text-sm md:text-lg">Email: info@company.com</p>
+            <p className="text-white text-sm md:text-base">Email: info@company.com</p>
           </div>
         </div>
       </div>

@@ -2,90 +2,82 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-10">
-      <div className="container mx-auto px-4 md:px-0 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-neutral-900 text-white py-10">
+      <div className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-20 max-w-screen-xl grid grid-cols-1 md:grid-cols-3 md:gap-28 gap-8">
         
-        {/* Our Company Section */}
+        {/* Latest News Section */}
         <div>
-          <h3 className="text-lg md:text-xl font-semibold mb-4">Our Company</h3>
-          <p className="text-sm md:text-base">
-            Express Global Reach, Valuable Local Expertise. Our operations started in 2017,
-            backed by several decades of expertise. V Win Express International has grown
-            to become a brand to reckon with in Mumbai. We extend an array of solutions
-            to serve customers whose business networks span the globe.
-          </p>
-          <p className="text-sm md:text-base mt-2">
-            Our portfolio includes many businesses & trading companies, big, medium, and
-            small-sized industrial houses who have come to rely on our exceptional express
-            courier services.
-          </p>
-          {/* Social Media Icons */}
-          <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-white hover:text-gray-400">
-              <i className="fab fa-facebook"></i>
-            </a>
-            <a href="#" className="text-white hover:text-gray-400">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="#" className="text-white hover:text-gray-400">
-              <i className="fab fa-linkedin"></i>
-            </a>
+          <h3 className="text-lg md:text-xl font-semibold mb-4">Latest News</h3>
+          <div className="border-t-4 border-red-600 mb-4"></div>
+          <div className="mb-4">
+            <p>Clinker silo steel structure – Case Study</p>
+            <p className="text-red-600">24 Apr, 2023</p>
+          </div>
+          <div className="border-t border-red-600 mb-4"></div>
+          <div className="mb-4">
+            <p>Penthouse structure at JSW cement</p>
+            <p className="text-red-600">10 Apr, 2023</p>
+          </div>
+          <div className="border-t border-red-600 mb-4"></div>
+          <div className="mb-4">
+            <p>Al Faris recently installed a Steam Box at a new Waste to Energy Plant in Dubai</p>
+            <p className="text-red-600">17 May, 2022</p>
           </div>
         </div>
 
-        {/* Additional Pages Section */}
+        {/* Site Map Section */}
         <div>
-          <h3 className="text-lg md:text-xl font-semibold mb-4">Additional Pages</h3>
-          <ul className="space-y-2">
-            <li>
-              <a href="#" className="text-sm md:text-base hover:text-gray-400">About Us</a>
+          <h3 className="text-lg md:text-xl font-semibold mb-4">Site Map</h3>
+          <div className="border-t-4 border-red-600 mb-4"></div>
+          <ul className="relative">
+            <div className="absolute left-0 top-0 bottom-0 w-px bg-white"></div>
+            <li className="mb-2 flex items-center">
+              <div className="w-4 h-px bg-white mr-2"></div> 
+              <a href="/about" className="hover:text-gray-400">About Us</a>
             </li>
-            <li>
-              <a href="#" className="text-sm md:text-base hover:text-gray-400">How We Work</a>
+            <li className="mb-2 flex items-center">
+              <div className="w-4 h-px bg-white mr-2"></div> 
+              <a href="/services" className="hover:text-gray-400">How We Work</a>
             </li>
-            <li>
-              <a href="#" className="text-sm md:text-base hover:text-gray-400">Quick Support</a>
+            <li className="mb-2 flex items-center">
+              <div className="w-4 h-px bg-white mr-2"></div> 
+              <a href="/contact" className="hover:text-gray-400">Quick Support</a>
             </li>
-            <li>
-              <a href="#" className="text-sm md:text-base hover:text-gray-400">Contact Us</a>
+            <li className="mb-2 flex items-center">
+              <div className="w-4 h-px bg-white mr-2"></div> 
+              <a href="/contact" className="hover:text-gray-400">Contact Us</a>
             </li>
-            <li>
-              <a href="#" className="text-sm md:text-base hover:text-gray-400">Privacy Policy</a>
+            <li className="mb-2 flex items-center">
+              <div className="w-4 h-px bg-white mr-2"></div> 
+              <a href="/privacy-policy" className="hover:text-gray-400">Privacy Policy</a>
             </li>
           </ul>
         </div>
 
-        {/* Contact Us Form */}
+        {/* Contact Details Section */}
         <div>
-          <h3 className="text-lg md:text-xl font-semibold mb-4">Contact Us</h3>
-          <form>
-            <div className="mb-4">
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded-md"
-              />
-            </div>
-            <div className="mb-4">
-              <input
-                type="email"
-                placeholder="E-Mail Address"
-                className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded-md"
-              />
-            </div>
-            <div className="mb-4">
-              <textarea
-                placeholder="Your Message"
-                className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded-md h-32"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-md w-full md:w-auto"
-            >
-              SEND MESSAGE
-            </button>
-          </form>
+          <h3 className="text-lg md:text-xl font-semibold mb-4">Contact Details</h3>
+          <div className="border-t-4 border-red-600 mb-4"></div>
+          <div className="relative">
+            <div className="absolute left-0 top-0 bottom-0 w-px bg-white"></div>
+            <p className="mb-4 flex items-center">
+              <div className="w-4 h-px bg-white mr-2"></div> 
+              Plot 532-107, DIC, SaihShuaib 3, UAE Po. Box #: 29089
+            </p>
+            <p className="mb-4 flex items-center">
+              <div className="w-4 h-px bg-white mr-2"></div> 
+              UAE call us on: 800 cranes / 800 272637
+            </p>
+            <p className="mb-4 flex items-center">
+              <div className="w-4 h-px bg-white mr-2"></div> 
+              KSA call us on: 9200 crane / 9200 27263
+            </p>
+            <p className="mb-4 flex items-center">
+              <div className="w-4 h-px bg-white mr-2"></div> 
+              Email us at – Dubai: info@alfarisuae.com
+            </p>
+            
+          </div>
         </div>
 
       </div>
