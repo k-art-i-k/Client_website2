@@ -18,17 +18,19 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Form Data Submitted:", formData); // Check the form data
 
     emailjs
       .sendForm(
-        "service_y7wjuxp",
-        "template_fprk6oe",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "OPpyHSV2t0511iXjf"
+        import.meta.env.VITE_EMAILJS_USER_ID
       )
       .then(
         (result) => {
           alert("Message sent successfully!");
+          console.log(result.text);
           setFormData({
             user_name: "",
             user_email: "",
@@ -37,6 +39,7 @@ const Contact = () => {
           });
         },
         (error) => {
+          console.error("EmailJS Error:", error.text); // Log the error
           alert("Failed to send message, please try again.");
         }
       );
@@ -88,11 +91,11 @@ const Contact = () => {
             <p className="text-gray-600 text-lg md:text-2xl font-bold mb-4">
               Contact us on our email
             </p>
-            <p className="text-blue-900 text-md md:text-xl font-semibold mb-2">
-              info@yourdomain.com
-            </p>
+
             <p className="text-blue-900 text-md md:text-xl font-semibold">
-              support@yourdomain.com
+              ops@v-winexpress.com <br />
+              info@v-winexpress.com <br />
+              vwinexpress@gmail.com
             </p>
           </div>
 
@@ -103,8 +106,9 @@ const Contact = () => {
             <p className="text-gray-600 text-lg md:text-2xl font-bold mb-4">
               Visit us at our office
             </p>
-            <p className="text-blue-900 text-md md:text-xl font-semibold mb-2">
-              123, ABC Street, Mumbai, India
+            <p className="text-blue-900 text-md md:text-base font-semibold mb-2">
+              Bharateeya Kala Mandal, Ground Level, C/2- A , No:3, OM Nagar Near
+              J.B.Nagar, Andheri East, Mumbai-400 099.
             </p>
           </div>
         </div>

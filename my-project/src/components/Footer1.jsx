@@ -8,27 +8,27 @@ const Footer = () => {
         {/* Latest News Section */}
         <div>
           <h3 className="text-lg md:text-xl font-semibold mb-4">Latest News</h3>
-          <div className="border-t-4 border-red-600 mb-4"></div>
+          <div className="border-t-4 border-yellow-500 mb-4"></div>
           <div className="mb-4">
             <p>Clinker silo steel structure – Case Study</p>
-            <p className="text-red-600">24 Apr, 2023</p>
+            <p className="text-yellow-500">24 Apr, 2023</p>
           </div>
-          <div className="border-t border-red-600 mb-4"></div>
+          <div className="border-t border-yellow-500 mb-4"></div>
           <div className="mb-4">
             <p>Penthouse structure at JSW cement</p>
-            <p className="text-red-600">10 Apr, 2023</p>
+            <p className="text-yellow-500">10 Apr, 2023</p>
           </div>
-          <div className="border-t border-red-600 mb-4"></div>
+          <div className="border-t border-yellow-500 mb-4"></div>
           <div className="mb-4">
             <p>Al Faris recently installed a Steam Box at a new Waste to Energy Plant in Dubai</p>
-            <p className="text-red-600">17 May, 2022</p>
+            <p className="text-yellow-500">17 May, 2022</p>
           </div>
         </div>
 
         {/* Site Map Section */}
         <div>
           <h3 className="text-lg md:text-xl font-semibold mb-4">Site Map</h3>
-          <div className="border-t-4 border-red-600 mb-4"></div>
+          <div className="border-t-4 border-yellow-500 mb-4"></div>
           <ul className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-px bg-white"></div>
             <li className="mb-2 flex items-center">
@@ -57,24 +57,29 @@ const Footer = () => {
         {/* Contact Details Section */}
         <div>
           <h3 className="text-lg md:text-xl font-semibold mb-4">Contact Details</h3>
-          <div className="border-t-4 border-red-600 mb-4"></div>
+          <div className="border-t-4 border-yellow-500 mb-4"></div>
           <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-px bg-white"></div>
             <p className="mb-4 flex items-center">
               <div className="w-4 h-px bg-white mr-2"></div> 
-              Plot 532-107, DIC, SaihShuaib 3, UAE Po. Box #: 29089
+              Bharateeya Kala Mandal,
             </p>
             <p className="mb-4 flex items-center">
               <div className="w-4 h-px bg-white mr-2"></div> 
-              UAE call us on: 800 cranes / 800 272637
+              Ground Level, C/2- A 
             </p>
             <p className="mb-4 flex items-center">
               <div className="w-4 h-px bg-white mr-2"></div> 
-              KSA call us on: 9200 crane / 9200 27263
+               No:3, OM Nagar Near
+              J.B.Nagar, Andheri East, Mumbai-400 099.
             </p>
             <p className="mb-4 flex items-center">
               <div className="w-4 h-px bg-white mr-2"></div> 
-              Email us at – Dubai: info@alfarisuae.com
+              Email us at – : info@v-winexpress.com
+            </p>
+            <p className="mb-4 flex items-center">
+              <div className="w-4 h-px bg-white mr-2"></div> 
+              Phone: +91 9768703115 / <br /> +91 9833066922 
             </p>
             
           </div>

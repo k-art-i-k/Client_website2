@@ -101,11 +101,11 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4 mr-4">
           <div className="flex items-center bg-indigo-900 rounded-full p-2 md:p-4">
             <FontAwesomeIcon icon={faPhone} className="text-amber-300 mr-2" />
-            <p className="text-white text-sm md:text-base">Phone: (123) 456-7890</p>
+            <p className="text-white text-sm md:text-base">Phone: +91 9768703115 / +91 9833066922 </p>
           </div>
           <div className="flex items-center bg-indigo-900 rounded-full p-2 md:p-4">
             <FontAwesomeIcon icon={faEnvelope} className="text-amber-300 mr-2" />
-            <p className="text-white text-sm md:text-base">Email: info@company.com</p>
+            <p className="text-white text-sm md:text-base">Email: info@v-winexpress.com</p>
           </div>
         </div>
       </div>
