@@ -2,9 +2,7 @@ import React from "react";
 import Banner from "../assets/Banner_about.jpg";
 import SkillsSection from "../components/SkillSection"; // Importing the SkillsSection component
 import bg1 from "../assets/about_bg1.jpg"
-import bg2 from "../assets/about_bg2.jpg"
-import bg3 from "../assets/about_bg3.jpg"
-import bg4 from "../assets/about_bg4.jpg"
+
 import bg5 from "../assets/contract_logistics.webp"
 
 const AboutUs = () => {
@@ -21,7 +19,7 @@ const AboutUs = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-2 font-bold">
             About Us
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
+          <p className="text-sm sm:text-base md:text-lg lg:text-lg">
             We have over 20 years of experience
           </p>
         </div>

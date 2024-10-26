@@ -29,7 +29,7 @@ const CompanySection = () => {
           <p className="mt-2 text-xs text-white sm:text-sm md:text-lg md:max-w-xl max-w-sm">
             Powered by a global network and backed by local expertise, we connect people with goods, services, ideas, and technologies that ignite innovation and take businesses forward.
           </p>
-          <button className="mt-6 px-4 py-2 text-xs font-semibold text-yellow-600 bg-white rounded-full hover:bg-yellow-500 hover:text-white sm:px-6 sm:py-2 sm:text-sm">
+          <button className="mt-6 px-4 py-2 text-xs font-semibold text-white hover:text-indigo-900 bg-indigo-900 hover:bg-white rounded-full  sm:px-6 sm:py-2 sm:text-sm">
             Read More
           </button>
         </div>

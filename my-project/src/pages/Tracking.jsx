@@ -20,7 +20,7 @@ const TrackingPage = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
             Track
           </h1>
-          <p className="text-sm sm:text-base md:text-xl lg:text-2xl font-bold">
+          <p className="text-sm sm:text-base md:text-lg lg:text-lg ">
             Track Your Shipment
           </p>
         </div>
@@ -38,7 +38,7 @@ const TrackingPage = () => {
           </div>
           <div className="flex-grow">
             <h1 className="md:text-5xl text-3xl font-bold text-gray-800 text-center md:text-left">
-              Track <span className="text-indigo-600">Your Shipment</span>
+              Track <span className="text-indigo-800">Your Shipment</span>
             </h1>
             <div className="mt-8 p-8 border border-gray-300 rounded-lg">
               <div className="flex justify-center space-x-6 mb-4">
@@ -55,7 +55,7 @@ const TrackingPage = () => {
                 </label>
                 <label className="flex items-center text-lg">
                   <input
-                    className="form-radio text-indigo-600"
+                    className="form-radio text-indigo-900"
                     name="tracking"
                     type="radio"
                   />
@@ -72,7 +72,7 @@ const TrackingPage = () => {
               <div className="flex justify-center mt-4">
                 {" "}
                 {/* Added this wrapper div */}
-                <button className="w-1/3 md:w-1/3 bg-indigo-600 text-white py-2 rounded-full text-md md:text-base font-semibold">
+                <button className="w-1/3 md:w-1/3 bg-indigo-900 hover:bg-indigo-600  text-white py-2 rounded-full text-md md:text-base font-semibold">
                   TRACK ORDER
                 </button>
               </div>
