@@ -5,125 +5,185 @@ import Image3 from '../assets/Banner3.jpg';
 import Image4 from '../assets/Banner4.jpg';
 import Image5 from '../assets/Banner5.jpg';
 import Image6 from '../assets/Banner6.jpg';
+import { Link } from 'react-router-dom';
 
-const services = [
-  {
-    id: 1,
-    name: "Domestic Services",
-    description: "For deliveries within the India, we offer a full list of domestic delivery services to cater to the varying needs of modern businesses. All our domestic services are handled with acumen , and professionalism.We cater to the every ending need of the esteemed customers, to reach their valued shipments within the shortest possible time.We also offer reverse pick ups and ferry the same to the shipper with flexible options with greater convenience with trustworthy and reliable work force at place. This effective service will give a competitive edge , and gain prominence for you in the market.",
-    image: Image1,
-
-  },
-  {
-    id: 2,
-    name: "International Services",
-    description: <div>
-        <p>Our International operations takes your business to the next level with an array of products viz - export service of documents, packages , commercial exports and more.
-
-We cater to the demands of growing businesses which often require documents and packages to be delivered within the shortest possible time frames. We guarantee the fastest onforward connections from BOM gateway, with every single shipment being subject to thorough physical check of contents and paper works to pave way for a swift and secure delivery at the destination.
-
-With guaranteed on-time deliveries for time-critical international shipments that need immediate pick-up and door delivery, our export process can be customized to suit your requirement. We carry anything from documents to parcels of 500 grams with no upper limit on the weight / volume of the cargo.</p>
-<p>We employ the fastest modes of transportation to any global destination within the shortest time possible and here comes our own linehaul to major gateways and hubs in strategic stations offering our deliveries with no compromise on the quality. The direct linehaul shortens the transit time, therefore providing the shortest reach…</p> 
-<br />
-<p>Our strategic partnership with leading express companies span over every corner of the globe. Whatever your requirement may be , we are there to take care of the expectations with our star service with no compromise on quality.</p>
-    </div>,
-    image: Image2,
-  },
-  {
-    id: 3,
-    name: "Freight / Dangerous / Critical Cargo Handling / Road Transport",
-    description: <div>
-        <p>Our Road Transport services extend across the length and breadth of the nation and are the most economical mode of logistics with the assurance of on-times deliveries.</p>
-        <p>With the fleet of vehicle , you can be assured of safe, secure , smooth and dependable logistical experience with us. This includes handling of DGR shipments on FTL movements.</p>
-    </div>,
-    image: Image3,
-  },
-  {
-    id: 4,
-    name: "International Stations With Safe Line Haul",
-    description: <div>
-        <p>We have our own direct line haul of express / courier shipments being flown to Qatar ( DOHA ) , UAE ( DUBAI ) , Singapore , Iran , & Iraq.</p>
-        <p>By doing so, we are able to cater to the needs of our esteemed clients with a short transit time , customs clearance & Deliveries.</p>
-    </div>,
-    image: Image4,
-  },
-  {
-    id: 5,
-    name: "Pune - Mumbai - Pune Direct Trucking",
-    description: <div>
-        <p>We offer express trucking services between PUNE and Mumbai, thus opening a lot of access to the entire Maharastra , Vidharba region.</p>
-        <p>We are able to cater to the express / courier needs of our clients located in these areas with a 24 – 48 transit time .</p>
-        <p>We will be able to provide Warehouse to warehouse transportation services, and at the same time provide door deliveries to the consignee.</p>
-    </div>,
-    image: Image5,
-  },
-  {
-    id: 6,
-    name: "Import Operations",
-    description: <div>
-        <p>With our ever expanding network of agents, we are providing import services to our esteemed clientele.</p>
-        <p>We are able to provide import services from Bangladesh , Nepal , Taiwan , Thailand , Vietnam , China , Indonesia , Singapore and Sri Lanka.</p>
-        <p>We also align with other major players and import from world-wide stations. Attachments area</p>
-    </div>,
-    image: Image6,
-  },
-];
-
-const ServicesPage = () => {
-  const [selectedService, setSelectedService] = useState(services[0]);
-
+const ServiceSection = () => {
   return (
     <div className="font-roboto mt-20 md:mt-36">
-      {/* Top Image Section */}
-      <div className="relative mb-12">
+      <div className="relative">
         <img
-          src={Image1} // Replace with the actual path to the top image
-          alt="Our Services"
-          className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
+          alt="Yellow truck with company logo"
+          className="w-full h-[300px] sm:h-[400px] md:h-[400px] lg:h-[400px] object-cover"
+          src={Image1}
         />
-        <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white">
-          <h1 className="text-5xl font-bold">Our Services</h1>
-          <p className="text-lg mt-2">With more than 20 years of experience</p>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-2 font-bold">
+            Service
+          </h1>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-bold">
+            We have over 20 years of experience
+          </p>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="flex flex-col p-4 md:p-8 lg:flex-row gap-8 mb-12">
-        {/* Service List */}
-        <div className="flex-shrink-0 w-full lg:w-5/12">
-          <ul className="space-y-4">
-            {services.map((service) => (
-              <li key={service.id}>
-                <button
-                  onClick={() => setSelectedService(service)}
-                  className={`w-full text-left px-6 py-3 rounded-md shadow-lg ${
-                    selectedService.id === service.id
-                      ? "bg-indigo-900 text-white"
-                      : "bg-indigo-200 text-indigo-900"
-                  } hover:bg-indigo-900 hover:text-white transition-colors duration-200`}
-                >
-                  {service.name}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Service Content */}
-        <div className="flex-1">
-          <div className="mb-6">
-            <img
-              src={selectedService.image}
-              alt={selectedService.name}
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
-            />
+      
+      <div className="bg-white py-8 sm:py-12 md:py-8 px-4 sm:px-8 md:px-16">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+            <div className="flex flex-col text-center justify-center md:pl-6 w-full">
+              
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-4">
+              Our Expertise
+              </h2>
+              <p className="mt-4 sm:mt-6 text-gray-500 text-sm sm:text-base md:text-lg leading-relaxed">
+                 
+              </p>
+            </div>
           </div>
-          <h2 className="text-3xl font-semibold mb-4">{selectedService.name}</h2>
-          <p className="text-gray-700">{selectedService.description}</p>
         </div>
       </div>
+
+      {/* MediaCard divs with responsive styling */}
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
+        <img
+          src={Image2}
+          alt="Background image related to courier shipment"
+          className="absolute inset-0 w-full h-full object-cover md:h-full sm:h-[50%]"
+          width="1920"
+          height="1080"
+        />
+        <div className="absolute inset-0 flex md:items-end md:justify-start items-end justify-center mb-6 mr-4 md:mr-0">
+          <div className="card bg-white bg-opacity-90 text-black border-t-8 border-indigo-900 p-2 md:p-8 rounded-lg shadow-lg max-w-lg transition delay-150 duration-300 hover:bg-indigo-900 hover:text-white">
+            <h1 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+              <b className="border-b-4 border-indigo-900">Domestic service</b>
+            </h1>
+            <p className="mb-2 md:mb-4 text-base md:text-lg">
+            For deliveries within the India, we offer a full list of domestic delivery services to cater to the varying needs of modern businesses. All our domestic services are handled with acumen , and professionalism...
+
+            </p>
+            <Link to="/Domestic">Read more</Link>
+          </div>
+
+        </div>
+      </div>
+
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
+        <img
+          src={Image1}
+          alt="Background image related to courier shipment"
+          className="absolute inset-0 w-full h-full object-cover md:h-full sm:h-[50%]"
+          width="1920"
+          height="1080"
+        />
+        <div className="absolute inset-0 flex md:items-end md:justify-start items-end justify-center mb-6 mr-4 md:mr-0">
+          <div className="card bg-white bg-opacity-90 text-black border-t-8 border-indigo-900 p-2 md:p-8 rounded-lg shadow-lg max-w-lg transition delay-150 duration-300 hover:bg-indigo-900 hover:text-white">
+            <h1 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+              <b className="border-b-4 border-indigo-900">International Services</b>
+            </h1>
+            <p className="mb-2 md:mb-4 text-base md:text-lg">
+            Our International operations takes your business to the next level with an array of products viz - export service of documents, packages , commercial exports and more...
+            </p>
+            <Link to="/International-Services">Read more</Link>
+
+          </div>
+        </div>
+      </div>
+
+      
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
+        <img
+          src={Image3}
+          alt="Background image related to courier shipment"
+          className="absolute inset-0 w-full h-full object-cover md:h-full sm:h-[50%]"
+          width="1920"
+          height="1080"
+        />
+        <div className="absolute inset-0 flex md:items-end md:justify-start items-end justify-center mb-6 mr-4 md:mr-0">
+          <div className="card bg-white bg-opacity-90 text-black border-t-8 border-indigo-900 p-2 md:p-8 rounded-lg shadow-lg max-w-lg transition delay-150 duration-300 hover:bg-indigo-900 hover:text-white">
+            <h1 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+              <b className="border-b-4 border-indigo-900">Freight / Dangerous / Critical Cargo handling : Road Transport</b>
+            </h1>
+            <p className="mb-2 md:mb-4 text-base md:text-lg">
+            Our Road Transport services extend across the length and breadth of the nation and are the most economical mode of logistics with the assurance of on-times deliveries...
+            </p>
+            <Link to="/Freight">Read more</Link>
+
+          </div>
+        </div>
+      </div>
+
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
+        <img
+          src={Image4}
+          alt="Background image related to courier shipment"
+          className="absolute inset-0 w-full h-full object-cover md:h-full sm:h-[50%]"
+          width="1920"
+          height="1080"
+        />
+        <div className="absolute inset-0 flex md:items-end md:justify-start items-end justify-center mb-6 mr-4 md:mr-0">
+          <div className="card bg-white bg-opacity-90 text-black border-t-8 border-indigo-900 p-2 md:p-8 rounded-lg shadow-lg max-w-lg transition delay-150 duration-300 hover:bg-indigo-900 hover:text-white">
+            <h1 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+              <b className="border-b-4 border-indigo-900">International Stations with Self Line haul</b>
+            </h1>
+            <p className="mb-2 md:mb-4 text-base md:text-lg">
+            We have our own direct line haul of express / courier shipments being flown to Qatar ( DOHA ) , UAE ( DUBAI ) , Singapore , Iran , & Iraq.
+            </p>
+            <Link to="/International-Stations-Self-Line-haul">Read more</Link>
+
+          </div>
+        </div>
+      </div>
+
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
+        <img
+          src={Image5}
+          alt="Background image related to courier shipment"
+          className="absolute inset-0 w-full h-full object-cover md:h-full sm:h-[50%]"
+          width="1920"
+          height="1080"
+        />
+        <div className="absolute inset-0 flex md:items-end md:justify-start items-end justify-center mb-6 mr-4 md:mr-0">
+          <div className="card bg-white bg-opacity-90 text-black border-t-8 border-indigo-900 p-2 md:p-8 rounded-lg shadow-lg max-w-lg transition delay-150 duration-300 hover:bg-indigo-900 hover:text-white">
+            <h1 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+              <b className="border-b-4 border-indigo-900">Pune – Mumbai – Pune Direct trucking</b>
+            </h1>
+            <p className="mb-2 md:mb-4 text-base md:text-lg">
+            We offer express trucking services between PUNE and Mumbai, thus opening a lot of access to the entire Maharastra , Vidharba region.
+            </p>
+            <Link to="/Pune-Mumbai-Pune">Read more</Link>
+
+          </div>
+        </div>
+      </div>
+
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
+        <img
+          src={Image6}
+          alt="Background image related to courier shipment"
+          className="absolute inset-0 w-full h-full object-cover md:h-full sm:h-[50%]"
+          width="1920"
+          height="1080"
+        />
+        <div className="absolute inset-0 flex md:items-end md:justify-start items-end justify-center mb-6 mr-4 md:mr-0">
+          <div className="card bg-white bg-opacity-90 text-black border-t-8 border-indigo-900 p-2 md:p-8 rounded-lg shadow-lg max-w-lg transition delay-150 duration-300 hover:bg-indigo-900 hover:text-white">
+            <h1 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+              <b className="border-b-4 border-indigo-900">Import operations</b>
+            </h1>
+            <p className="mb-2 md:mb-4 text-base md:text-lg">
+            With our ever expanding network of agents, we are providing import services to our esteemed clientele.
+            </p>
+            <Link to="/Import-operations">Read more</Link>
+
+          </div>
+        </div>
+      </div>
+
+      
     </div>
   );
 };
 
-export default ServicesPage;
+
+export default ServiceSection
+

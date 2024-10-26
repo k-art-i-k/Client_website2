@@ -3,9 +3,9 @@ import Image7 from '../assets/Banner7.jpg'; // Update the path to your image
 
 const CompanySection = () => {
   return (
-    <section className="relative w-full h-auto py-8 md:py-16">
+    <section className="relative w-full h-auto py-8 md:py-0">
       {/* Image Section with Overlayed Text */}
-      <div className="relative w-full h-80 sm:h-96 md:h-[500px]">
+      <div className="relative w-full h-80 sm:h-96 md:h-[800px]">
         <img
           src={Image7} // Replace this with the correct image path
           alt="Company overview"
@@ -13,7 +13,7 @@ const CompanySection = () => {
         />
 
         {/* Overlay (dark layer to improve text readability) */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-0"></div>
 
         {/* Text Content on Image */}
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 text-center md:px-12">
@@ -21,7 +21,7 @@ const CompanySection = () => {
             Who we are
           </h2>
           <h1 className="mt-2 text-xl font-bold leading-tight text-white sm:text-2xl md:text-4xl">
-            Get to know about <span className="text-blue-400">V Win Express International</span>
+            Get to know about <span className="text-yellow-400">V Win Express International</span>
           </h1>
           <p className="mt-4 text-xs text-white sm:text-sm md:text-lg md:max-w-xl max-w-sm">
             Our Portfolio includes many businesses & trading companies, big, medium, and small-sized industrial houses who have come to rely on our exceptional express courier services.
