@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Image3 from '../assets/Banner3.jpg';
-import Image4 from '../assets/Banner4.jpg';
-import Image5 from '../assets/Banner5.jpg';
+import Image3 from '../assets/about_bg2.jpg';
+import Image4 from '../assets/international-courier.webp';
+import Image5 from '../assets/Banner3.jpg';
 import Image6 from '../assets/Banner6.jpg';
 
 const services = [
@@ -41,14 +41,14 @@ const ServicesSection = () => {
           We are prepared and able to provide excellent service and pursue the high goals for future.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4  gap-6 md:gap-8">
         {services.map((service, index) => (
-          <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+          <div key={index} className="bg-white shadow-xl  shadow-indigo-400 rounded-lg overflow-hidden transition-transform transform hover:scale-105">
             <img src={service.imageUrl} alt={service.title} className="w-full h-40 sm:h-48 md:h-56 object-cover" />
             <div className="p-4 sm:p-6">
               <h3 className="text-base sm:text-lg font-semibold text-gray-800">{service.title}</h3>
               <p className="mt-2 text-gray-500 text-sm sm:text-base">{service.description}</p>
-              <button className="mt-4 px-3 py-2 sm:px-4 sm:py-2 bg-yellow-500 text-white text-sm font-semibold rounded hover:bg-yellow-600">
+              <button className="mt-4 px-3 py-2 sm:px-4 sm:py-2 bg-indigo-900 text-white text-sm font-semibold rounded hover:bg-indigo-600">
                 {service.buttonText}
               </button>
             </div>

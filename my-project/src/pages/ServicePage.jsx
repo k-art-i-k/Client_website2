@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Image1 from '../assets/Banner2.jpg';
-import Image2 from '../assets/Banner1.jpg';
+import Image1 from '../assets/domestic_service.jpg';
+import Image2 from '../assets/Intl_courier.jpg';
 import Image3 from '../assets/Banner3.jpg';
 import Image4 from '../assets/Banner4.jpg';
 import Image5 from '../assets/Banner5.jpg';
@@ -47,7 +47,7 @@ const ServiceSection = () => {
       {/* MediaCard divs with responsive styling */}
       <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
         <img
-          src={Image2}
+          src={Image1}
           alt="Background image related to courier shipment"
           className="absolute inset-0 w-full h-full object-cover md:h-full sm:h-[50%]"
           width="1920"
@@ -59,7 +59,7 @@ const ServiceSection = () => {
               <b className="border-b-4 border-indigo-900">Domestic service</b>
             </h1>
             <p className="mb-2 md:mb-4 text-base md:text-lg">
-            For deliveries within the India, we offer a full list of domestic delivery services to cater to the varying needs of modern businesses. All our domestic services are handled with acumen , and professionalism...
+            For deliveries within the India, we offer a full listed of domestic delivery services to cater to the varying needs of modern businesses. All our domestic services are handled with acumen , and professionalism...
 
             </p>
             <Link to="/Domestic">Read more</Link>
@@ -70,7 +70,7 @@ const ServiceSection = () => {
 
       <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
         <img
-          src={Image1}
+          src={Image2}
           alt="Background image related to courier shipment"
           className="absolute inset-0 w-full h-full object-cover md:h-full sm:h-[50%]"
           width="1920"

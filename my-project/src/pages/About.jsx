@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "../assets/Banner_about.jpg";
+import Banner from "../assets/AboutUs.jpg";
 import SkillsSection from "../components/SkillSection"; // Importing the SkillsSection component
 import bg1 from "../assets/about_bg1.jpg"
 
@@ -14,7 +14,7 @@ const AboutUs = () => {
           className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
           src={Banner}
         />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-2 font-bold">
             About Us
@@ -98,7 +98,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:mx-8"> 
         <img
           src="https://storage.googleapis.com/a1aa/image/4mk94toZwV4wPBUhzCpNL6wcsyTw9VgjPlfqFSaHNyHetZqTA.jpg"
           alt="Background image related to courier shipment"

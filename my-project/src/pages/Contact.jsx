@@ -46,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="font-roboto mt-20 md:mt-36">
+    <div className="font-roboto mt-20 md:mt-36 bg-gray-200">
       <div className="relative">
         {/* Background Image */}
         <img
@@ -56,7 +56,7 @@ const Contact = () => {
           width={1600}
           height={600}
         />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-2 font-bold">
             Contact Us
@@ -67,10 +67,10 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="bg-white py-10">
+      <div className="bg-gray-200">
         <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-12 p-8">
           {/* Phone Section */}
-          <div className="bg-gray-100 p-8 md:p-12 rounded-lg shadow-xl  shadow-indigo-400  text-center w-full md:w-[28rem] h-auto flex flex-col items-center">
+          <div className="bg-gray-100 p-8 md:p-12 rounded-lg shadow-xl  shadow-indigo-400  text-center w-full md:w-[28rem] h-auto flex flex-col items-center transition-transform transform hover:scale-105 shadow-xl  shadow-indigo-400 ">
             <FaPhoneAlt className="text-4xl md:text-5xl text-blue-900 mb-4" />
             <h2 className="text-2xl md:text-4xl font-bold">Phone</h2>
             <p className="text-gray-600 text-lg md:text-2xl font-bold mb-4">
@@ -85,14 +85,14 @@ const Contact = () => {
           </div>
 
           {/* Email Section */}
-          <div className="bg-gray-100 p-8 md:p-12 rounded-lg shadow-xl  shadow-indigo-400 text-center w-full md:w-[28rem] h-auto flex flex-col items-center">
+          <div className="bg-gray-100 p-8 md:p-12 rounded-lg shadow-xl  shadow-indigo-400 text-center w-full md:w-[28rem] h-auto flex flex-col items-center transition-transform transform hover:scale-105">
             <FaEnvelope className="text-4xl md:text-5xl text-blue-900 mb-4" />
             <h2 className="text-2xl md:text-4xl font-bold">Email</h2>
             <p className="text-gray-600 text-lg md:text-2xl font-bold mb-4">
               Contact us on our email
             </p>
 
-            <p className="text-blue-900 text-md md:text-xl font-semibold">
+            <p className="text-blue-900 text-md md:text-lg font-semibold">
               ops@v-winexpress.com <br />
               info@v-winexpress.com <br />
               vwinexpress@gmail.com
@@ -100,7 +100,7 @@ const Contact = () => {
           </div>
 
           {/* Address Section */}
-          <div className="bg-gray-100 p-8 md:p-12 rounded-lg shadow-xl  shadow-indigo-400 text-center w-full md:w-[28rem] h-auto flex flex-col items-center">
+          <div className="bg-gray-100 p-8 md:p-12 rounded-lg shadow-xl  shadow-indigo-400 text-center w-full md:w-[28rem] h-auto flex flex-col items-center transition-transform transform hover:scale-105">
             <FaMapMarkerAlt className="text-4xl md:text-5xl text-blue-900 mb-4" />
             <h2 className="text-2xl md:text-4xl font-bold">Address</h2>
             <p className="text-gray-600 text-lg md:text-2xl font-bold mb-4">
@@ -115,14 +115,14 @@ const Contact = () => {
       </div>
 
       {/* Flexbox layout for Map and Form */}
-      <div className="flex flex-col md:flex-row justify-center items-start bg-gray-100 border-4 border-x-4  shadow-xl  shadow-neutral-600 rounded-lg p-10 max-w-6xl mx-auto my-10 md:min-h-[700px]">
+      <div className="flex flex-col md:flex-row justify-center items-center bg-gray-100 border-4 border-x-4  shadow-xl  shadow-neutral-600 rounded-lg p-4 max-w-6xl mx-auto my-6 md:min-h-[700px]">
         {/* Map Section */}
-        <div className="w-full md:w-1/2 h-[400px] md:h-[700px] relative">
+        <div className="w-full md:w-1/2 h-[300px] md:h-[600px] relative">
           <MapComponent />
         </div>
 
         {/* Contact Form */}
-        <div className="w-full md:w-1/2 md:ml-10 mt-10 md:mt-0">
+        <div className="w-full md:w-1/2 md:ml-10  md:mt-0">
           <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center text-blue-900">
             Send us a message
           </h2>
@@ -206,7 +206,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md w-full md:w-auto"
+              className="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md  md:w-auto"
             >
               Send Message
             </button>

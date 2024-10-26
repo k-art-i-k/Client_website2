@@ -1,5 +1,5 @@
 import React from "react";
-import Image7 from '../assets/Banner7.jpg'; // Update the path to your image
+import Image7 from "../assets/about_bg1.jpg"; // Update the path to your image
 
 const CompanySection = () => {
   return (
@@ -13,11 +13,11 @@ const CompanySection = () => {
         />
 
         {/* Overlay (dark layer to improve text readability) */}
-        <div className="absolute inset-0 bg-black bg-opacity-0"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
         {/* Text Content on Image */}
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 text-center md:px-12">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-yellow-500 sm:text-sm">
+          <h2 className="text-base font-semibold md:font-bold uppercase tracking-wider text-yellow-400 md:text-lg">
             Who we are
           </h2>
           <h1 className="mt-2 text-xl font-bold leading-tight text-white sm:text-2xl md:text-4xl">
@@ -29,7 +29,7 @@ const CompanySection = () => {
           <p className="mt-2 text-xs text-white sm:text-sm md:text-lg md:max-w-xl max-w-sm">
             Powered by a global network and backed by local expertise, we connect people with goods, services, ideas, and technologies that ignite innovation and take businesses forward.
           </p>
-          <button className="mt-6 px-4 py-2 text-xs font-semibold text-yellow-600 bg-white rounded-full hover:bg-yellow-500 hover:text-white sm:px-6 sm:py-2 sm:text-sm">
+          <button className="mt-6 px-4 py-2 text-xs font-semibold text-white bg-indigo-900 rounded-full hover:bg-white hover:text-indigo-900 sm:px-6 sm:py-2 sm:text-sm">
             Read More
           </button>
         </div>

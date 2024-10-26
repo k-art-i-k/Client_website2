@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import Image1 from '../assets/Banner2.jpg';
-import Image2 from '../assets/Banner1.jpg';
-import Image3 from '../assets/Banner3.jpg';
+import Image1 from '../assets/domestic_service.jpg';
+import Image2 from '../assets/Banner2.jpg';
+import Image3 from '../assets/about_bg2.jpg';
 import Image4 from '../assets/Banner4.jpg';
-import Image5 from '../assets/Banner5.jpg';
+import Image5 from '../assets/Banner3.jpg';
 import Image6 from '../assets/Banner6.jpg';
+import Image7 from '../assets/services_banner.jpeg';
 
 const services = [
   {
@@ -77,11 +78,11 @@ const ServicesPage = () => {
       {/* Top Image Section */}
       <div className="relative mb-12">
         <img
-          src={Image1} // Replace with the actual path to the top image
+          src={Image7} // Replace with the actual path to the top image
           alt="Our Services"
           className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
         />
-        <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white">
+        <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-30 text-white">
           <h1 className="text-5xl font-bold">Our Services</h1>
           <p className="text-lg mt-2">With more than 20 years of experience</p>
         </div>
