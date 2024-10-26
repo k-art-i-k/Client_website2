@@ -1,11 +1,12 @@
 import React from 'react';
+import "./App.css"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Footer1 from './components/Footer1'
-import ServicesPage from './pages/ServicePage';
+import ServicesPage from './pages/ServicePage1';
 import Contact from './pages/Contact';
 import Tracking from './pages/Tracking';
 import PrivacyPolicy from './pages/PrivacyPolicy';
