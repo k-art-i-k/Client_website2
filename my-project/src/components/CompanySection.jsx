@@ -17,11 +17,11 @@ const CompanySection = () => {
 
         {/* Text Content on Image */}
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 text-center md:px-12">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-yellow-500 sm:text-sm">
+          <h2 className="text-xs  uppercase tracking-wider text-neutral-400 md:text-base font-bold">
             Who we are
           </h2>
           <h1 className="mt-2 text-xl font-bold leading-tight text-white sm:text-2xl md:text-4xl">
-            Get to know about <span className="text-blue-400">V Win Express International</span>
+            Get to know about <span className=" text-yellow-500">V Win Express International</span>
           </h1>
           <p className="mt-4 text-xs text-white sm:text-sm md:text-lg md:max-w-xl max-w-sm">
             Our Portfolio includes many businesses & trading companies, big, medium, and small-sized industrial houses who have come to rely on our exceptional express courier services.
