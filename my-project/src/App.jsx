@@ -11,11 +11,12 @@ import Contact from './pages/Contact';
 import Tracking from './pages/Tracking';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Contact1 from './components/Contact/Contact'
+import ScrollToTop from './scrollToTop' ;
 
 const App = () => {
   return (
     <Router>
-      
+       <ScrollToTop /> {/* This ensures scrolling to top on route change */}
       <Navbar />
 
    

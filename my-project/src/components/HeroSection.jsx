@@ -57,7 +57,7 @@ const HeroCarousel = () => {
           <br />
           An easy-to-use system which frees you up to focus on your core business and your customers.
         </p>
-        <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 mt-4 sm:mt-8 rounded-full">
+        <button className="bg-indigo-900 hover:bg-white text-white hover:text-indigo-900 font-bold py-2 sm:py-3 px-4 sm:px-6 mt-4 sm:mt-8 rounded-full">
           LEARN MORE
         </button>
       </div>
