@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -33,23 +34,23 @@ const Footer = () => {
             <div className="absolute left-0 top-0 bottom-0 w-px bg-white"></div>
             <li className="mb-2 flex items-center">
               <div className="w-4 h-px bg-white mr-2"></div> 
-              <a href="/about" className="hover:text-gray-400">About Us</a>
+              <Link to="/about" className="hover:text-gray-400">About Us</Link>
             </li>
             <li className="mb-2 flex items-center">
               <div className="w-4 h-px bg-white mr-2"></div> 
-              <a href="/services" className="hover:text-gray-400">How We Work</a>
+              <Link to="/services" className="hover:text-gray-400">How We Work</Link>
             </li>
             <li className="mb-2 flex items-center">
               <div className="w-4 h-px bg-white mr-2"></div> 
-              <a href="/contact" className="hover:text-gray-400">Quick Support</a>
+              <Link to="/contact" className="hover:text-gray-400">Quick Support</Link>
             </li>
             <li className="mb-2 flex items-center">
               <div className="w-4 h-px bg-white mr-2"></div> 
-              <a href="/contact" className="hover:text-gray-400">Contact Us</a>
+              <Link to="/contact" className="hover:text-gray-400">Contact Us</Link>
             </li>
             <li className="mb-2 flex items-center">
               <div className="w-4 h-px bg-white mr-2"></div> 
-              <a href="/privacy-policy" className="hover:text-gray-400">Privacy Policy</a>
+              <Link to="/privacy-policy" className="hover:text-gray-400">Privacy Policy</Link>
             </li>
           </ul>
         </div>
