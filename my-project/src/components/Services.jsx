@@ -16,7 +16,7 @@ const OurSection = () => {
     };
 
     return (
-        <div className="p-4 px-20">
+        <div className="p-4 md:px-20">
             <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-gray-800">Our Expertise</h2>
                 <p className="mt-4 text-lg text-gray-600">
@@ -25,42 +25,24 @@ const OurSection = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {/* Hardcoded images */}
-                <div className="relative group cursor-pointer aspect-[4/3]" onClick={handleImageClick}>
-                    <img src={Image1} alt="Cranes at a port" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 flex justify-center items-center bg-yellow-500 bg-opacity-50 text-white text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    International Services
+                {[Image1, Image2, Image3, Image4, Image5, Image6].map((image, index) => (
+                    <div
+                        key={index}
+                        className="relative group cursor-pointer aspect-[3/2]"
+                        onClick={handleImageClick}
+                    >
+                        <img src={image} alt={`Service ${index + 1}`} className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 flex justify-center items-center bg-yellow-500 bg-opacity-50 text-white text-lg opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
+                            {/* Add unique text for each image */}
+                            {index === 0 && "International Services"}
+                            {index === 1 && "Domestic service"}
+                            {index === 2 && "Freight / Dangerous / Critical Cargo handling : Road Transport"}
+                            {index === 3 && "International Stations with Self Line haul"}
+                            {index === 4 && "Pune – Mumbai – Pune Direct trucking"}
+                            {index === 5 && "Import operations"}
+                        </div>
                     </div>
-                </div>
-                <div className="relative group cursor-pointer aspect-[4/3]" onClick={handleImageClick}>
-                    <img src={Image2} alt="Construction site with cranes" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 flex justify-center items-center bg-yellow-500 bg-opacity-50 text-white text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Domestic service
-                    </div>
-                </div>
-                <div className="relative group cursor-pointer aspect-[4/3] aspect-[4/4]" onClick={handleImageClick}>
-                    <img src={Image3} alt="Heavy transport vehicles" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 flex justify-center items-center bg-yellow-500 bg-opacity-50 text-white text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Freight / Dangerous / Critical Cargo handling : Road Transport
-                    </div>
-                </div>
-                <div className="relative group cursor-pointer aspect-[4/3]" onClick={handleImageClick}>
-                    <img src={Image4} alt="Cranes lifting heavy equipment" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 flex justify-center items-center bg-yellow-500 bg-opacity-50 text-white text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    International Stations with Self Line haul
-                    </div>
-                </div>
-                <div className="relative group cursor-pointer aspect-[4/3]" onClick={handleImageClick}>
-                    <img src={Image5} alt="Industrial equipment" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 flex justify-center items-center bg-yellow-500 bg-opacity-50 text-white text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Pune – Mumbai – Pune Direct trucking
-                    </div>
-                </div>
-                <div className="relative group cursor-pointer aspect-[4/3]" onClick={handleImageClick}>
-                    <img src={Image6} alt="Industrial equipment" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 flex justify-center items-center bg-yellow-500 bg-opacity-50 text-white text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        Import operations
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import Image7 from "../assets/about_bg1.jpg"; // Update the path to your image
 
 const CompanySection = () => {
   return (
-    <section className="relative w-full h-auto py-8 md:py-0">
+    <section className="relative w-full h-auto py-0 md:py-0">
       {/* Image Section with Overlayed Text */}
       <div className="relative w-full h-80 sm:h-96 md:h-[800px]">
         <img
