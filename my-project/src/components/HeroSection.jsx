@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image1 from '../assets/Banner1.jpg';
+import Image1 from '../assets/about_bg1.jpg';
 import Image2 from '../assets/Banner2.jpg';
 import { Link } from "react-router-dom";
 
@@ -86,8 +86,9 @@ const HeroCarousel = () => {
           <img
             src={Image1}
             alt="VWIN Express Truck"
-            className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
+            className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-fill"
           />
+          <div className="absolute inset-0 bg-black bg-opacity-10"></div>
         </div>
         <div>
           <img
