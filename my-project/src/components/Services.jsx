@@ -1,11 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Image1 from '../assets/Intl_courier.jpg';
-import Image2 from '../assets/domestic_service.jpg';
-import Image3 from '../assets/about_bg2.jpg';
-import Image4 from '../assets/international-courier.webp';
-import Image5 from '../assets/Banner3.jpg';
-import Image6 from '../assets/Banner6.jpg';
+import Image1 from '../assets/International.jpg';
+import Image2 from '../assets/Domestic.jpg';
+import Image3 from '../assets/Banner3n.jpg';
+import Image4 from '../assets/Banner4n.jpg';
+import Image5 from '../assets/Pune.jpg';
+import Image6 from '../assets/Import.jpg';
 
 const OurSection = () => {
     const navigate = useNavigate(); // Initialize navigate for navigation

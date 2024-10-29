@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import Image1 from '../assets/domestic_service.jpg';
+import Banner from '../assets/ServicesBanner.jpg';
 import Image2 from '../assets/Intl_courier.jpg';
 import Image3 from '../assets/Banner3.jpg';
 import Image4 from '../assets/Banner4.jpg';
@@ -14,7 +14,7 @@ const ServiceSection = () => {
         <img
           alt="Yellow truck with company logo"
           className="w-full h-[300px] sm:h-[400px] md:h-[400px] lg:h-[400px] object-cover"
-          src={Image1}
+          src={Banner}
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">

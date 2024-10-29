@@ -1,5 +1,5 @@
 import React from "react";
-import Image7 from "../assets/MainBanner.png"; // Update the path to your image
+import Image7 from "../assets/Whoweare.jpg"; // Update the path to your image
 
 const CompanySection = () => {
   return (

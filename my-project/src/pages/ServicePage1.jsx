@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import Image1 from '../assets/domestic_service.jpg';
-import Image2 from '../assets/Banner2.jpg';
-import Image3 from '../assets/about_bg2.jpg';
-import Image4 from '../assets/Banner4.jpg';
-import Image5 from '../assets/Banner3.jpg';
-import Image6 from '../assets/Banner6.jpg';
-import Image7 from '../assets/services_banner.jpeg';
+import Banner from '../assets/ServicesBanner.jpg';
+
+import Image1 from '../assets/International.jpg';
+import Image2 from '../assets/Domestic.jpg';
+import Image3 from '../assets/Banner3n.jpg';
+import Image4 from '../assets/Banner4n.jpg';
+import Image5 from '../assets/Pune.jpg';
+import Image6 from '../assets/Import.jpg';
 
 const services = [
   {
@@ -78,7 +79,7 @@ const ServicesPage = () => {
       {/* Top Image Section */}
       <div className="relative mb-12">
         <img
-          src={Image7} // Replace with the actual path to the top image
+          src={Banner} // Replace with the actual path to the top image
           alt="Our Services"
           className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
         />

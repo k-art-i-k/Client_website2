@@ -1,6 +1,6 @@
 import React from 'react';
 import tracking from '../assets/Banner_tracking.jpg';
-import location from '../assets/location_tracking6.jpg';
+import location from '../assets/TrackingBanner.jpg';
 
 const TrackingPage = () => {
   return (

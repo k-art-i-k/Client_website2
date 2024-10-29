@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "../assets/AboutUs.jpg";
+import Banner from "../assets/AboutBanner.jpg";
 import SkillsSection from "../components/SkillSection"; // Importing the SkillsSection component
 import bg1 from "../assets/about_bg1.jpg"
 
