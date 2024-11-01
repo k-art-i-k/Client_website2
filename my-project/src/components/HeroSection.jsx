@@ -60,7 +60,7 @@ const HeroCarousel = () => {
   return (
     <div className="relative w-full overflow-hidden mt-20 md:mt-36" id="hero-section">
       <div className="absolute top-1/4 left-8 sm:left-16 text-white z-10">
-        <h6 className="text-sm text-gray-200 md:text-lg font-bold">
+        <h6 className="text-sm text-white md:text-lg font-bold">
           WE HAVE A SOLID BACKGROUND
         </h6>
         <h2 className="text-2xl md:text-5xl font-bold leading-tight mt-2 sm:mt-4">
@@ -73,7 +73,7 @@ const HeroCarousel = () => {
         </p>
         <Link to="/services">
           <button 
-            className="bg-indigo-900 hover:bg-white text-white hover:text-indigo-900 font-bold py-1 px-3 sm:py-3 sm:px-6 mt-4 sm:mt-8 rounded-full text-xs md:text-base"
+            className="bg-red-500 hover:bg-white text-white hover:text-red-500 font-bold py-1 px-3 sm:py-3 sm:px-6 mt-4 sm:mt-8 rounded-full text-xs md:text-base"
           >
             LEARN MORE
           </button>

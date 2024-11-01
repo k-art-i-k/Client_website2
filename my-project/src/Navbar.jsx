@@ -52,40 +52,40 @@ const Navbar = () => {
       }`}
     >
       {/* Upper menu */}
-      <div className="flex  bg-indigo-900 items-center h-16 hidden md:flex">
+      <div className="flex  bg-black items-center h-16 hidden md:flex">
         <nav className="w-full flex justify-center space-x-6">
           <Link
             to="/"
-            className="hover:text-gray-400 px-4 border-r border-gray-400 h-full flex items-center"
+            className="hover:text-red-500 px-4 border-r border-red-500 h-full flex items-center"
           >
             HOME
           </Link>
           <Link
             to="/about"
-            className="hover:text-gray-400 px-4 border-r border-gray-400 h-full flex items-center"
+            className="hover:text-red-500 px-4 border-r border-red-500 h-full flex items-center"
           >
             ABOUT
           </Link>
           <Link
             to="/services"
-            className="hover:text-gray-400 px-4 border-r border-gray-400 h-full flex items-center"
+            className="hover:text-red-500 px-4 border-r border-red-500 h-full flex items-center"
           >
             OUR SERVICES
           </Link>
           <Link
             to="/contact"
-            className="hover:text-gray-400 px-4 border-r border-gray-400 h-full flex items-center"
+            className="hover:text-red-500 px-4 border-r border-red-500 h-full flex items-center"
           >
             CONTACT US
           </Link>
-          <Link to="/tracking" className="hover:text-gray-400 px-4 h-full flex items-center">
+          <Link to="/tracking" className="hover:text-red-500 px-4 h-full flex items-center">
             TRACKING
           </Link>
         </nav>
       </div>
 
       {/* Main navbar */}
-      <div className="flex justify-between items-center  bg-slate-100 h-auto md:h-24 p-4 shadow-lg">
+      <div className="flex justify-between items-center  bg-slate-300 h-auto md:h-24 p-4 shadow-lg">
         <div className="flex items-center">
           <img src={logo} alt="Company Logo" className="h-16 md:h-24 md:ml-36" />
         </div>
@@ -99,12 +99,12 @@ const Navbar = () => {
 
         {/* Contact info for desktop */}
         <div className="hidden md:flex items-center space-x-4 mr-4">
-          <div className="flex items-center bg-indigo-900 rounded-full p-2 md:p-4">
-            <FontAwesomeIcon icon={faPhone} className="text-amber-300 mr-2" />
+          <div className="flex items-center bg-red-500 rounded-full p-2 md:p-4">
+            <FontAwesomeIcon icon={faPhone} className="text-white mr-2" />
             <p className="text-white text-sm md:text-base">Phone: +91 9768703115 / +91 9833066922 </p>
           </div>
-          <div className="flex items-center bg-indigo-900 rounded-full p-2 md:p-4">
-            <FontAwesomeIcon icon={faEnvelope} className="text-amber-300 mr-2" />
+          <div className="flex items-center bg-red-500 rounded-full p-2 md:p-4">
+            <FontAwesomeIcon icon={faEnvelope} className="text-white mr-2" />
             <p className="text-white text-sm md:text-base">Email: info@v-winexpress.com</p>
           </div>
         </div>
@@ -113,19 +113,19 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div className={`${menuOpen ? "block" : "hidden"} bg-black text-white md:hidden`}>
         <nav className="flex flex-col items-center">
-          <Link to="/" className="hover:bg-gray-700 w-full text-center py-2" onClick={toggleMenu}>
+          <Link to="/" className="hover:bg-red-700 w-full text-center py-2" onClick={toggleMenu}>
             HOME
           </Link>
-          <Link to="/about" className="hover:bg-gray-700 w-full text-center py-2" onClick={toggleMenu}>
+          <Link to="/about" className="hover:bg-red-700 w-full text-center py-2" onClick={toggleMenu}>
             ABOUT
           </Link>
-          <Link to="/services" className="hover:bg-gray-700 w-full text-center py-2" onClick={toggleMenu}>
+          <Link to="/services" className="hover:bg-red-700 w-full text-center py-2" onClick={toggleMenu}>
             OUR SERVICES
           </Link>
-          <Link to="/contact" className="hover:bg-gray-700 w-full text-center py-2" onClick={toggleMenu}>
+          <Link to="/contact" className="hover:bg-red-700 w-full text-center py-2" onClick={toggleMenu}>
             CONTACT US
           </Link>
-          <Link to="/tracking" className="hover:bg-gray-700 w-full text-center py-2" onClick={toggleMenu}>
+          <Link to="/tracking" className="hover:bg-red-700 w-full text-center py-2" onClick={toggleMenu}>
             TRACKING
           </Link>
         </nav>

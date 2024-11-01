@@ -34,21 +34,21 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <div className="bg-white py-8 sm:py-12 md:py-16 px-4 md:px-8 lg:px-12">
+    <div className=" py-8 sm:py-12 md:py-16 px-4 md:px-8 lg:px-12">
       <div className="text-center mb-8 sm:mb-10">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">What Do We Offer</h2>
-        <p className="mt-2 text-gray-500 text-sm sm:text-base">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-black">What Do We Offer</h2>
+        <p className="mt-2 text-white text-sm sm:text-base">
           We are prepared and able to provide excellent service and pursue the high goals for future.
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4  gap-6 md:gap-8">
         {services.map((service, index) => (
-          <div key={index} className="bg-white shadow-xl  shadow-indigo-400 rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+          <div key={index} className="bg-white shadow-xl  shadow-red-500 rounded-lg overflow-hidden transition-transform transform hover:scale-105">
             <img src={service.imageUrl} alt={service.title} className="w-full h-40 sm:h-48 md:h-56 object-cover" />
             <div className="p-4 sm:p-6">
               <h3 className="text-base sm:text-lg font-semibold text-gray-800">{service.title}</h3>
               <p className="mt-2 text-gray-500 text-sm sm:text-base">{service.description}</p>
-              <button className="mt-4 px-3 py-2 sm:px-4 sm:py-2 bg-indigo-900 text-white text-sm font-semibold rounded hover:bg-indigo-600">
+              <button className="mt-4 px-3 py-2 sm:px-4 sm:py-2 bg-red-500 text-white text-sm font-semibold rounded hover:bg-red-600">
                 {service.buttonText}
               </button>
             </div>

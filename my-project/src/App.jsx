@@ -15,8 +15,10 @@ import ScrollToTop from './scrollToTop' ;
 
 const App = () => {
   return (
-    <Router>
+    <div className="bg-gray-500">
+    <Router >
        <ScrollToTop /> {/* This ensures scrolling to top on route change */}
+       
       <Navbar />
 
    
@@ -36,6 +38,7 @@ const App = () => {
      <Footer1/>
       <Footer />
     </Router>
+    </div>
   );
 };
 

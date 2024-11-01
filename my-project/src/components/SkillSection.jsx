@@ -37,7 +37,7 @@ const SkillsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div className="text-left flex flex-col justify-center items-center">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 sm:mb-8">
-              Our <span className="text-yellow-500">Skills</span>
+              Our <span className="text-red-500">Skills</span>
             </h2>
             <p className="text-gray-100 text-sm sm:text-base text- text-center md:text-lg">
               We are also associated with airlines to provide Airport to Airport
@@ -50,25 +50,25 @@ const SkillsSection = () => {
           </div>
           <div className="grid grid-cols-2 gap-6">
             <div className="bg-neutral-800 p-6 sm:p-8 bg-opacity-50 h-40 sm:h-48 rounded-lg flex flex-col items-center justify-center text-center">
-              <h3 className="text-4xl sm:text-5xl font-bold text-yellow-500 counter" data-target="945">
+              <h3 className="text-4xl sm:text-5xl font-bold text-red-500 counter" data-target="945">
                 0
               </h3>
               <p className="text-gray-300 mt-2 text-base sm:text-sm">Work Hours</p>
             </div>
             <div className="bg-neutral-800 bg-opacity-50 p-6 sm:p-8 h-40 sm:h-48 rounded-lg flex flex-col items-center justify-center text-center">
-              <h3 className="text-4xl sm:text-5xl font-bold text-yellow-500 counter" data-target="1280">
+              <h3 className="text-4xl sm:text-5xl font-bold text-red-500 counter" data-target="1280">
                 0
               </h3>
               <p className="text-gray-300 mt-2 text-base sm:text-sm">Great Reviews</p>
             </div>
             <div className="bg-neutral-800 bg-opacity-50 p-6 sm:p-8 h-40 sm:h-48 rounded-lg flex flex-col items-center justify-center text-center">
-              <h3 className="text-4xl sm:text-5xl font-bold text-yellow-500 counter" data-target="578">
+              <h3 className="text-4xl sm:text-5xl font-bold text-red-500 counter" data-target="578">
                 0
               </h3>
               <p className="text-gray-300 mt-2 text-base sm:text-sm">Projects Done</p>
             </div>
             <div className="bg-neutral-800 bg-opacity-50 p-6 sm:p-8 h-40 sm:h-48 rounded-lg flex flex-col items-center justify-center text-center">
-              <h3 className="text-4xl sm:text-5xl font-bold text-yellow-500 counter" data-target="26">
+              <h3 className="text-4xl sm:text-5xl font-bold text-red-500 counter" data-target="26">
                 0
               </h3>
               <p className="text-gray-300 mt-2 text-base sm:text-sm">Awards Won</p>

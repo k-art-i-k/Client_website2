@@ -9,27 +9,27 @@ const Footer = () => {
         {/* Latest News Section */}
         <div>
           <h3 className="text-lg md:text-xl font-semibold mb-4">Latest News</h3>
-          <div className="border-t-4 border-yellow-500 mb-4"></div>
+          <div className="border-t-4 border-red-500 mb-4"></div>
           <div className="mb-4">
             <p>Clinker silo steel structure – Case Study</p>
-            <p className="text-yellow-500">24 Apr, 2023</p>
+            <p className="text-red-500">24 Apr, 2023</p>
           </div>
-          <div className="border-t border-yellow-500 mb-4"></div>
+          <div className="border-t border-red-500 mb-4"></div>
           <div className="mb-4">
             <p>Penthouse structure at JSW cement</p>
-            <p className="text-yellow-500">10 Apr, 2023</p>
+            <p className="text-red-500">10 Apr, 2023</p>
           </div>
-          <div className="border-t border-yellow-500 mb-4"></div>
+          <div className="border-t border-red-500 mb-4"></div>
           <div className="mb-4">
             <p>Al Faris recently installed a Steam Box at a new Waste to Energy Plant in Dubai</p>
-            <p className="text-yellow-500">17 May, 2022</p>
+            <p className="text-red-500">17 May, 2022</p>
           </div>
         </div>
 
         {/* Site Map Section */}
         <div>
           <h3 className="text-lg md:text-xl font-semibold mb-4">Site Map</h3>
-          <div className="border-t-4 border-yellow-500 mb-4"></div>
+          <div className="border-t-4 border-red-500 mb-4"></div>
           <ul className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-px bg-white"></div>
             <li className="mb-2 flex items-center">
@@ -58,7 +58,7 @@ const Footer = () => {
         {/* Contact Details Section */}
         <div>
           <h3 className="text-lg md:text-xl font-semibold mb-4">Contact Details</h3>
-          <div className="border-t-4 border-yellow-500 mb-4"></div>
+          <div className="border-t-4 border-red-500 mb-4"></div>
           <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-px bg-white"></div>
             <p className="mb-4 flex items-center">
