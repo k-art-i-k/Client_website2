@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const ServiceSection = () => {
   return (
-    <div className="font-roboto mt-20 md:mt-36">
+    <div className="font-roboto mt-16 md:mt-24">
       <div className="relative">
         <img
           alt="Yellow truck with company logo"
@@ -27,17 +27,17 @@ const ServiceSection = () => {
         </div>
       </div>
 
-      
+
       <div className="bg-white py-8 sm:py-12 md:py-8 px-4 sm:px-8 md:px-16">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row gap-8 md:gap-12">
             <div className="flex flex-col text-center justify-center md:pl-6 w-full">
-              
+
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-4">
-              Our Expertise
+                Our Expertise
               </h2>
               <p className="mt-4 sm:mt-6 text-gray-500 text-sm sm:text-base md:text-lg leading-relaxed">
-                 
+
               </p>
             </div>
           </div>
@@ -45,7 +45,7 @@ const ServiceSection = () => {
       </div>
 
       {/* MediaCard divs with responsive styling */}
-      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8">
         <img
           src={Image1}
           alt="Background image related to courier shipment"
@@ -59,7 +59,7 @@ const ServiceSection = () => {
               <b className="border-b-4 border-indigo-900">Domestic service</b>
             </h1>
             <p className="mb-2 md:mb-4 text-base md:text-lg">
-            For deliveries within the India, we offer a full listed of domestic delivery services to cater to the varying needs of modern businesses. All our domestic services are handled with acumen , and professionalism...
+              For deliveries within the India, we offer a full listed of domestic delivery services to cater to the varying needs of modern businesses. All our domestic services are handled with acumen , and professionalism...
 
             </p>
             <Link to="/Domestic">Read more</Link>
@@ -68,7 +68,7 @@ const ServiceSection = () => {
         </div>
       </div>
 
-      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8">
         <img
           src={Image2}
           alt="Background image related to courier shipment"
@@ -82,7 +82,7 @@ const ServiceSection = () => {
               <b className="border-b-4 border-indigo-900">International Services</b>
             </h1>
             <p className="mb-2 md:mb-4 text-base md:text-lg">
-            Our International operations takes your business to the next level with an array of products viz - export service of documents, packages , commercial exports and more...
+              Our International operations takes your business to the next level with an array of products viz - export service of documents, packages , commercial exports and more...
             </p>
             <Link to="/International-Services">Read more</Link>
 
@@ -90,8 +90,8 @@ const ServiceSection = () => {
         </div>
       </div>
 
-      
-      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
+
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8">
         <img
           src={Image3}
           alt="Background image related to courier shipment"
@@ -105,7 +105,7 @@ const ServiceSection = () => {
               <b className="border-b-4 border-indigo-900">Freight / Dangerous / Critical Cargo handling : Road Transport</b>
             </h1>
             <p className="mb-2 md:mb-4 text-base md:text-lg">
-            Our Road Transport services extend across the length and breadth of the nation and are the most economical mode of logistics with the assurance of on-times deliveries...
+              Our Road Transport services extend across the length and breadth of the nation and are the most economical mode of logistics with the assurance of on-times deliveries...
             </p>
             <Link to="/Freight">Read more</Link>
 
@@ -113,7 +113,7 @@ const ServiceSection = () => {
         </div>
       </div>
 
-      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8">
         <img
           src={Image4}
           alt="Background image related to courier shipment"
@@ -127,7 +127,7 @@ const ServiceSection = () => {
               <b className="border-b-4 border-indigo-900">International Stations with Self Line haul</b>
             </h1>
             <p className="mb-2 md:mb-4 text-base md:text-lg">
-            We have our own direct line haul of express / courier shipments being flown to Qatar ( DOHA ) , UAE ( DUBAI ) , Singapore , Iran , & Iraq.
+              We have our own direct line haul of express / courier shipments being flown to Qatar ( DOHA ) , UAE ( DUBAI ) , Singapore , Iran , & Iraq.
             </p>
             <Link to="/International-Stations-Self-Line-haul">Read more</Link>
 
@@ -135,7 +135,7 @@ const ServiceSection = () => {
         </div>
       </div>
 
-      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8">
         <img
           src={Image5}
           alt="Background image related to courier shipment"
@@ -149,7 +149,7 @@ const ServiceSection = () => {
               <b className="border-b-4 border-indigo-900">Pune – Mumbai – Pune Direct trucking</b>
             </h1>
             <p className="mb-2 md:mb-4 text-base md:text-lg">
-            We offer express trucking services between PUNE and Mumbai, thus opening a lot of access to the entire Maharastra , Vidharba region.
+              We offer express trucking services between PUNE and Mumbai, thus opening a lot of access to the entire Maharastra , Vidharba region.
             </p>
             <Link to="/Pune-Mumbai-Pune">Read more</Link>
 
@@ -157,7 +157,7 @@ const ServiceSection = () => {
         </div>
       </div>
 
-      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8"> 
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-900 text-white p-6 sm:p-8 m-2 md:m-8">
         <img
           src={Image6}
           alt="Background image related to courier shipment"
@@ -171,7 +171,7 @@ const ServiceSection = () => {
               <b className="border-b-4 border-indigo-900">Import operations</b>
             </h1>
             <p className="mb-2 md:mb-4 text-base md:text-lg">
-            With our ever expanding network of agents, we are providing import services to our esteemed clientele.
+              With our ever expanding network of agents, we are providing import services to our esteemed clientele.
             </p>
             <Link to="/Import-operations">Read more</Link>
 
@@ -179,7 +179,7 @@ const ServiceSection = () => {
         </div>
       </div>
 
-      
+
     </div>
   );
 };

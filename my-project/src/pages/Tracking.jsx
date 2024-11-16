@@ -52,7 +52,7 @@ const TrackingPage = () => {
   };
 
   return (
-    <div className="bg-gray-800 font-roboto mt-20 md:mt-36">
+    <div className="bg-gray-800 font-roboto mt-16 md:mt-24">
       {/* Banner Section */}
       <div className="relative">
         <img
@@ -138,53 +138,53 @@ const TrackingPage = () => {
 
           {/* Display Docket Info */}
           <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left text-gray-700 border-collapse">
-  <thead className="bg-gray-700 text-white">
-    <tr>
-      <th className="px-4 py-2">AWB No.</th>
-      <th className="px-4 py-2">Booking Date</th>
-      <th className="px-4 py-2">Consignee Name</th>
-      <th className="px-4 py-2">Destination</th>
-      <th className="px-4 py-2">No. of Pieces</th>
-      <th className="px-4 py-2">Status</th>
-      <th className="px-4 py-2">Date & Time</th>
-      <th className="px-4 py-2">Receiver Name</th>
-      <th className="px-4 py-2">Forwarding No.</th>
-      <th className="px-4 py-2">View POD</th>
-    </tr>
-  </thead>
-  <tbody>
-    {Array.isArray(trackingData.docket_info) && trackingData.docket_info.length > 0 ? (
-      <tr>
-        {[
-          { label: "AWB No.", jsonKey: "AWB No." },
-          { label: "Booking Date", jsonKey: "Booking Date" },
-          { label: "Consignee Name", jsonKey: "Consignee Name" },
-          { label: "Destination", jsonKey: "Destination" },
-          { label: "No. of Pieces", jsonKey: "pcs", fromRoot: true }, // added fromRoot flag
-          { label: "Status", jsonKey: "Status" },
-          { label: "Date & Time", jsonKey: "Delivery Date and Time" },
-          { label: "Receiver Name", jsonKey: "Receiver Name" },
-          { label: "Forwarding No.", jsonKey: "Forwarding No." },
-          { label: "View POD", jsonKey: "pod_image" }
-        ].map(({ label, jsonKey, fromRoot }) => {
-          // Check if we're fetching from root or docket_info
-          const value = fromRoot
-            ? trackingData[jsonKey] || "N/A"  // Fetch from root if fromRoot is true
-            : trackingData.docket_info.find(([key]) => key === jsonKey)?.[1] || "N/A"; // Otherwise, fetch from docket_info
-          
-          return (
-            <td key={label} className="px-4 py-2">{value}</td>
-          );
-        })}
-      </tr>
-    ) : (
-      <tr>
-        <td colSpan="11" className="px-4 py-2 text-center">No docket info available.</td>
-      </tr>
-    )}
-  </tbody>
-</table>
+            <table className="w-full text-sm text-left text-gray-700 border-collapse">
+              <thead className="bg-gray-700 text-white">
+                <tr>
+                  <th className="px-4 py-2">AWB No.</th>
+                  <th className="px-4 py-2">Booking Date</th>
+                  <th className="px-4 py-2">Consignee Name</th>
+                  <th className="px-4 py-2">Destination</th>
+                  <th className="px-4 py-2">No. of Pieces</th>
+                  <th className="px-4 py-2">Status</th>
+                  <th className="px-4 py-2">Date & Time</th>
+                  <th className="px-4 py-2">Receiver Name</th>
+                  <th className="px-4 py-2">Forwarding No.</th>
+                  <th className="px-4 py-2">View POD</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Array.isArray(trackingData.docket_info) && trackingData.docket_info.length > 0 ? (
+                  <tr>
+                    {[
+                      { label: "AWB No.", jsonKey: "AWB No." },
+                      { label: "Booking Date", jsonKey: "Booking Date" },
+                      { label: "Consignee Name", jsonKey: "Consignee Name" },
+                      { label: "Destination", jsonKey: "Destination" },
+                      { label: "No. of Pieces", jsonKey: "pcs", fromRoot: true }, // added fromRoot flag
+                      { label: "Status", jsonKey: "Status" },
+                      { label: "Date & Time", jsonKey: "Delivery Date and Time" },
+                      { label: "Receiver Name", jsonKey: "Receiver Name" },
+                      { label: "Forwarding No.", jsonKey: "Forwarding No." },
+                      { label: "View POD", jsonKey: "pod_image" }
+                    ].map(({ label, jsonKey, fromRoot }) => {
+                      // Check if we're fetching from root or docket_info
+                      const value = fromRoot
+                        ? trackingData[jsonKey] || "N/A"  // Fetch from root if fromRoot is true
+                        : trackingData.docket_info.find(([key]) => key === jsonKey)?.[1] || "N/A"; // Otherwise, fetch from docket_info
+
+                      return (
+                        <td key={label} className="px-4 py-2">{value}</td>
+                      );
+                    })}
+                  </tr>
+                ) : (
+                  <tr>
+                    <td colSpan="11" className="px-4 py-2 text-center">No docket info available.</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
 
 
 

@@ -11,33 +11,33 @@ import Contact from './pages/Contact';
 import Tracking from './pages/Tracking';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Contact1 from './components/Contact/Contact'
-import ScrollToTop from './scrollToTop' ;
+import ScrollToTop from './scrollToTop';
 
 const App = () => {
   return (
-    <div className="bg-gray-500">
-    <Router >
-       <ScrollToTop /> {/* This ensures scrolling to top on route change */}
-       
-      <Navbar />
+    <div className="bg-gray-100">
+      <Router >
+        <ScrollToTop /> {/* This ensures scrolling to top on route change */}
 
-   
-      <div className="min-h-screen"> 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/contact" element={<Contact />} />
-           <Route path="/tracking" element={<Tracking />} /> 
-           <Route path="/privacy-policy" element={<PrivacyPolicy/>} /> 
-           <Route path='/contact1' element={<Contact1/>}/>
-           
-        </Routes>
-      </div>
+        <Navbar />
 
-     <Footer1/>
-      <Footer />
-    </Router>
+
+        <div className="min-h-screen">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/tracking" element={<Tracking />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path='/contact1' element={<Contact1 />} />
+
+          </Routes>
+        </div>
+
+        <Footer1 />
+        <Footer />
+      </Router>
     </div>
   );
 };

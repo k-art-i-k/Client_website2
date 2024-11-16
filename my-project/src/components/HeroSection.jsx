@@ -1,106 +1,88 @@
-import React, { useState, useEffect } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Image1 from '../assets/Banner1n.jpg';
-import Image2 from '../assets/Banner2n.jpg';
-import { Link } from "react-router-dom";
+import React from 'react';
+import { FaMapMarkerAlt, FaPlane, FaWeightHanging } from 'react-icons/fa'; // Icons from react-icons
+import Frame3 from '../assets/Frame3.png'; // Adjust path if necessary
+import Review from '../assets/RightContent.png'
 
-// Custom Arrow Components
-const NextArrow = (props) => {
-  const { className, style, onClick } = props;
+const HeroSection = () => {
   return (
-    <div
-      className={`${className} right-5 z-20`} 
-      style={{ ...style, display: "block", background: "rgba(0, 0, 0, 0.5)", borderRadius: '50%' }}
-      onClick={onClick}
-    />
-  );
-};
+    <div className="relative flex flex-col items-center justify-between h-[700px] "> {/* Changed h-full to h-screen */}
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${Frame3})` }}
+      ></div>
+      <div className="absolute inset-0 "></div>
 
-const PrevArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} left-5 z-20`} 
-      style={{ ...style, display: "block", background: "rgba(0, 0, 0, 0.5)", borderRadius: '50%' }}
-      onClick={onClick}
-    />
-  );
-};
+      {/* Hero Content */}
+      <div className="relative z-10 max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center lg:justify-between w-full gap-4">
+        {/* Left Side: Text */}
+        <div className="lg:w-1/2">
+          <h1 className="text-4xl font-bold text-black mb-4 mt-56">
+            It's A Big World Out There, Go Explore!
+          </h1>
+        </div>
 
-const HeroCarousel = () => {
-  const [settings, setSettings] = useState({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-  });
+        {/* Right Side: Reviews and Description */}
+        <div className="lg:w-1/2 flex flex-col lg:items-start mt-56 ml-36"> {/* Adjusted to mx-6 for equal spacing */}
+          <p className="text-lg text-gray-700 mb-4">
+            We're here to make your travel dreams a reality. Our intuitive search engine scours thousands of flights to bring you the best deals tailored to your preferences and budget.
+          </p>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center">
+              <img
+                src={Review}
+                alt="review"
+                className="w-full h-8 rounded-full cursor-pointer"
+              />
 
-  useEffect(() => {
-    const updateSettings = () => {
-      setSettings((prevSettings) => ({
-        ...prevSettings,
-        arrows: window.innerWidth >= 640, // Hide arrows if screen width is less than 640px
-      }));
-    };
+            </div>
 
-    updateSettings(); // Set initial setting based on current screen width
-    window.addEventListener("resize", updateSettings);
+          </div>
+        </div>
 
-    return () => window.removeEventListener("resize", updateSettings);
-  }, []);
-
-  return (
-    <div className="relative w-full overflow-hidden mt-20 md:mt-36" id="hero-section">
-      <div className="absolute top-1/4 left-8 sm:left-16 text-white z-10">
-        <h6 className="text-sm text-white md:text-lg font-bold">
-          WE HAVE A SOLID BACKGROUND
-        </h6>
-        <h2 className="text-2xl md:text-5xl font-bold leading-tight mt-2 sm:mt-4">
-          RELIABILITY AND SIMPLICITY
-        </h2>
-        <p className=" text-xs md:text-xl mt-2 sm:mt-4">
-          No booking required with our daily designated pickup times.
-          <br />
-          An easy-to-use system which frees you up to focus on your core business and your customers.
-        </p>
-        <Link to="/services">
-          <button 
-            className="bg-red-500 hover:bg-white text-white hover:text-red-500 font-bold py-1 px-3 sm:py-3 sm:px-6 mt-4 sm:mt-8 rounded-full text-xs md:text-base"
-          >
-            LEARN MORE
-          </button>
-        </Link>
       </div>
 
-      {/* Slider with Images */}
-      <Slider {...settings} className="relative">
-        <div>
-          <img
-            src={Image1}
-            alt="VWIN Express Truck"
-            className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-fill"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+      {/* Search Section */}
+      <div className="relative z-10 w-full max-w-5xl mt-6 bg-white shadow-lg rounded-lg p-4 translate-y-7">
+        <div className="flex items-center gap-4">
+          {/* Origin */}
+          <div className="flex items-center w-full border border-gray-300 rounded-lg px-4 py-2">
+            <FaMapMarkerAlt className="text-gray-500 mr-2" />
+            <input
+              type="text"
+              placeholder="Origin"
+              className="w-full focus:outline-none"
+            />
+          </div>
+
+          {/* Destination */}
+          <div className="flex items-center w-full border border-gray-300 rounded-lg px-4 py-2">
+            <FaPlane className="text-gray-500 mr-2" />
+            <input
+              type="text"
+              placeholder="Destination"
+              className="w-full focus:outline-none"
+            />
+          </div>
+
+          {/* Weight */}
+          <div className="flex items-center w-full border border-gray-300 rounded-lg px-4 py-2">
+            <FaWeightHanging className="text-gray-500 mr-2" />
+            <input
+              type="text"
+              placeholder="Weight (KG)"
+              className="w-full focus:outline-none"
+            />
+          </div>
+
+          {/* Button */}
+          <button className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+            Track
+          </button>
         </div>
-        <div>
-          <img
-            src={Image2}
-            alt="Global Reach and Local Expertise"
-            className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-5"></div>
-        </div>
-      </Slider>
+      </div>
     </div>
   );
 };
 
-export default HeroCarousel;
+export default HeroSection;
