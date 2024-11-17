@@ -49,7 +49,7 @@ const HeroSection = () => {
               <img
                 src={Review}
                 alt="review"
-                className="w-full cursor-pointer"
+                className="w-[90%] md:w-full cursor-pointer"
               />
             </div>
           </div>
