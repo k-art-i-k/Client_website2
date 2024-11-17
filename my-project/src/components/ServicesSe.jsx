@@ -1,62 +1,90 @@
-import React from 'react';
+import React from "react";
+import Image1 from '../assets/Image1.png'
+import Image2 from '../assets/Image2.png'
+import Image3 from '../assets/Image3.png'
 
-import Image3 from '../assets/Banner3n.jpg';
-import Image4 from '../assets/Banner4n.jpg';
-import Image5 from '../assets/Pune.jpg';
-import Image6 from '../assets/Import.jpg';
-
-const services = [
-  {
-    title: 'Critical Cargo Handling',
-    description: 'We ensure safe and efficient transportation of critical goods.',
-    buttonText: 'Read More',
-    imageUrl: Image3, // Replace with actual image path
-  },
-  {
-    title: 'International Stations with Self Line Haul',
-    description: 'Connecting globally with our international logistics network.',
-    buttonText: 'Read More',
-    imageUrl: Image4, // Replace with actual image path
-  },
-  {
-    title: 'Pune – Mumbai – Pune Direct Trucking',
-    description: 'Direct, efficient, and timely delivery across the route.',
-    buttonText: 'Read More',
-    imageUrl: Image5, // Replace with actual image path
-  },
-  {
-    title: 'Import Operations',
-    description: 'Handling complex import procedures for smooth logistics.',
-    buttonText: 'Read More',
-    imageUrl: Image6, // Replace with actual image path
-  },
-];
-
-const ServicesSection = () => {
+const OperationMode = () => {
   return (
-    <div className=" py-8 sm:py-12 md:py-16 px-4 md:px-8 lg:px-12">
-      <div className="text-center mb-8 sm:mb-10">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-black">What Do We Offer</h2>
-        <p className="mt-2 text-white text-sm sm:text-base">
-          We are prepared and able to provide excellent service and pursue the high goals for future.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4  gap-6 md:gap-8">
-        {services.map((service, index) => (
-          <div key={index} className="bg-white shadow-xl  shadow-red-500 rounded-lg overflow-hidden transition-transform transform hover:scale-105">
-            <img src={service.imageUrl} alt={service.title} className="w-full h-40 sm:h-48 md:h-56 object-cover" />
-            <div className="p-4 sm:p-6">
-              <h3 className="text-base sm:text-lg font-semibold text-gray-800">{service.title}</h3>
-              <p className="mt-2 text-gray-500 text-sm sm:text-base">{service.description}</p>
-              <button className="mt-4 px-3 py-2 sm:px-4 sm:py-2 bg-red-500 text-white text-sm font-semibold rounded hover:bg-red-600">
-                {service.buttonText}
-              </button>
+    <div className="max-w-6xl mx-auto p-6 bg-white">
+      <h2 className="text-center text-2xl font-bold mb-8">
+        <span className="border-b-4 border-red-600 pb-1">Operation</span> Mode
+      </h2>
+      <div className="space-y-8">
+        {/* Connect Section */}
+        <div className="flex items-center space-x-8">
+
+          <div className="flex-1">
+            <div className="flex items-center mb-2">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white font-bold mr-4">
+                1
+              </div>
+              <h3 className="font-semibold text-xl">Connect</h3>
             </div>
+            <p className="text-gray-600">
+              You’re currently running your store on Shopify, WooCommerce, or
+              any other platform. As a first step, you’ll connect your store
+              with our platform.
+            </p>
           </div>
-        ))}
+          <div className="flex-1">
+            <img
+              src={Image1}
+              alt="Connect"
+              className="w-full h-60 object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Store Section */}
+        <div className="flex items-center space-x-8">
+          <div className="flex-1">
+            <img
+              src={Image2}
+              alt="Store"
+              className="w-full h-60 object-contain"
+            />
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center mb-2">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white font-bold mr-4">
+                2
+              </div>
+              <h3 className="font-semibold text-xl">Store</h3>
+            </div>
+            <p className="text-gray-600">
+              Then, you can send us your inventory, and the fun begins. We'll
+              choose a delivery day together so your fulfillment is not
+              interrupted.
+            </p>
+          </div>
+        </div>
+
+        {/* Ship Section */}
+        <div className="flex items-center space-x-8">
+
+          <div className="flex-1">
+            <div className="flex items-center mb-2">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white font-bold mr-4">
+                3
+              </div>
+              <h3 className="font-semibold text-xl">Ship</h3>
+            </div>
+            <p className="text-gray-600">
+              We pick, pack, and ship all incoming orders directly from our own
+              warehouse until 12 pm on the same day.
+            </p>
+          </div>
+          <div className="flex-1">
+            <img
+              src={Image3}
+              alt="Ship"
+              className="w-full h-60 object-contain"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default ServicesSection;
+export default OperationMode;

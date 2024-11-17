@@ -1,58 +1,62 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import tracking from '../assets/Banner_tracking.jpg';
 import location from '../assets/TrackingBanner.jpg';
 
+const hasDeliveryInfo = (data) => {
+  return data && Array.isArray(data.docket_events) && data.docket_events.length > 0;
+};
+
+
 const TrackingPage = () => {
   const [trackingNumber, setTrackingNumber] = useState('');
-  const [isForwarding, setIsForwarding] = useState(false);
+  const [forwardingNumber, setForwardingNumber] = useState('');
   const [trackingData, setTrackingData] = useState(null);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleTrackOrder = async () => {
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const trackingNo = searchParams.get('trackingNo');
+    const forwardingNo = searchParams.get('forwardingNo');
+
+    setTrackingNumber(trackingNo || '');
+    setForwardingNumber(forwardingNo || '');
+
+    if (trackingNo || forwardingNo) {
+      handleTrackOrder(trackingNo, forwardingNo);
+    }
+  }, [searchParams]);
+
+  const handleTrackOrder = async (trackingNo = trackingNumber, forwardingNo = forwardingNumber) => {
     setError('');
     setTrackingData(null);
     setIsLoading(true);
 
-    const apiCompanyId = 3; // replace with actual ID if needed
-    const customerCode = 'T001';
-    const apiUrl = `https://admin.v-winexpress.com/api/tracking_api/get_tracking_data?api_company_id=3&customer_code=superadmin&tracking_no=${trackingNumber}`;
+    const apiUrl = `https://admin.v-winexpress.com/api/tracking_api/get_tracking_data?api_company_id=3&customer_code=superadmin${trackingNo ? `&tracking_no=${trackingNo}` : ''
+      }${forwardingNo ? `&forwarding_no=${forwardingNo}` : ''}`;
 
-    console.log(apiUrl); // Check if the URL is formed correctly
+    console.log(apiUrl)
 
     try {
-      const response = await fetch(apiUrl); // Use fetch directly
-      const data = await response.json(); // Convert response to JSON
-      console.log('response ' + JSON.stringify(data, null, 2)); // Logging the response
+      const response = await fetch(apiUrl);
+      const data = await response.json();
 
       if (data && Array.isArray(data) && data.length > 0) {
-        setTrackingData(data[0]); // Set the first element of the array as tracking data
+        setTrackingData(data[0]);
       } else {
         setError('No tracking information found.');
       }
     } catch (err) {
       setError('Failed to fetch tracking information. Please try again.');
-      console.error(err);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const hasDeliveryInfo = (trackingData) => {
-    if (!trackingData || !Array.isArray(trackingData.docket_info)) return false;
-    return trackingData.docket_info.some(([key, value]) =>
-      ["Delivery Date and Time", "Receiver Name"].includes(key) && value
-    );
-  };
-
-  const handleInputChange = (e) => {
-    const input = e.target.value;
-    setTrackingNumber(input);
-    setError(''); // Clear error on input change
-  };
-
   return (
-    <div className="bg-gray-800 font-roboto mt-20 md:mt-36">
+    <div className="bg-gray-800 font-roboto mt-16 md:mt-24">
       {/* Banner Section */}
       <div className="relative">
         <img
@@ -87,40 +91,28 @@ const TrackingPage = () => {
               Track <span className="text-red-500">Your Shipment</span>
             </h1>
             <div className="mt-8 p-8 border border-gray-300 rounded-lg">
-              <div className="flex justify-center space-x-6 mb-4">
-                <label className="flex items-center text-lg">
-                  <input
-                    className="form-radio text-red-600"
-                    name="tracking"
-                    type="radio"
-                    defaultChecked={!isForwarding}
-                    onChange={() => setIsForwarding(false)}
-                  />
-                  <span className="ml-2 text-gray-700">Tracking no.</span>
-                </label>
-                <label className="flex items-center text-lg">
-                  <input
-                    className="form-radio text-red-600"
-                    name="tracking"
-                    type="radio"
-                    onChange={() => setIsForwarding(true)}
-                  />
-                  <span className="ml-2 text-gray-700">Forwarding no.</span>
-                </label>
-              </div>
               <div className="flex items-center border border-yellow-500 rounded-full px-6 py-2">
                 <input
                   className="flex-grow outline-none text-gray-600 text-base px-2"
-                  placeholder={`Enter Your ${isForwarding ? 'Forwarding' : 'Tracking'} no.`}
+                  placeholder="Enter Tracking Number"
                   type="text"
                   value={trackingNumber}
-                  onChange={handleInputChange}
+                  onChange={(e) => setTrackingNumber(e.target.value)}
+                />
+              </div>
+              <div className="mt-4 flex items-center border border-yellow-500 rounded-full px-6 py-2">
+                <input
+                  className="flex-grow outline-none text-gray-600 text-base px-2"
+                  placeholder="Enter Forwarding Number"
+                  type="text"
+                  value={forwardingNumber}
+                  onChange={(e) => setForwardingNumber(e.target.value)}
                 />
               </div>
               <div className="flex justify-center mt-4">
                 <button
                   className="w-1/2 md:w-1/3 bg-red-900 hover:bg-red-600 text-white py-2 rounded-full text-sm md:text-sm font-semibold"
-                  onClick={handleTrackOrder}
+                  onClick={() => handleTrackOrder()}
                 >
                   {isLoading ? 'Loading...' : 'TRACK ORDER'}
                 </button>
@@ -135,56 +127,56 @@ const TrackingPage = () => {
       {trackingData && (
         <div className="max-w-7xl mx-auto bg-white p-6 mt-6 rounded-lg shadow-md">
           <h2 className="text-2xl font-bold mb-4">AWB: {trackingData.tracking_no}</h2>
-
+          {/* Additional tracking info can go here */}
           {/* Display Docket Info */}
           <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left text-gray-700 border-collapse">
-  <thead className="bg-gray-700 text-white">
-    <tr>
-      <th className="px-4 py-2">AWB No.</th>
-      <th className="px-4 py-2">Booking Date</th>
-      <th className="px-4 py-2">Consignee Name</th>
-      <th className="px-4 py-2">Destination</th>
-      <th className="px-4 py-2">No. of Pieces</th>
-      <th className="px-4 py-2">Status</th>
-      <th className="px-4 py-2">Date & Time</th>
-      <th className="px-4 py-2">Receiver Name</th>
-      <th className="px-4 py-2">Forwarding No.</th>
-      <th className="px-4 py-2">View POD</th>
-    </tr>
-  </thead>
-  <tbody>
-    {Array.isArray(trackingData.docket_info) && trackingData.docket_info.length > 0 ? (
-      <tr>
-        {[
-          { label: "AWB No.", jsonKey: "AWB No." },
-          { label: "Booking Date", jsonKey: "Booking Date" },
-          { label: "Consignee Name", jsonKey: "Consignee Name" },
-          { label: "Destination", jsonKey: "Destination" },
-          { label: "No. of Pieces", jsonKey: "pcs", fromRoot: true }, // added fromRoot flag
-          { label: "Status", jsonKey: "Status" },
-          { label: "Date & Time", jsonKey: "Delivery Date and Time" },
-          { label: "Receiver Name", jsonKey: "Receiver Name" },
-          { label: "Forwarding No.", jsonKey: "Forwarding No." },
-          { label: "View POD", jsonKey: "pod_image" }
-        ].map(({ label, jsonKey, fromRoot }) => {
-          // Check if we're fetching from root or docket_info
-          const value = fromRoot
-            ? trackingData[jsonKey] || "N/A"  // Fetch from root if fromRoot is true
-            : trackingData.docket_info.find(([key]) => key === jsonKey)?.[1] || "N/A"; // Otherwise, fetch from docket_info
-          
-          return (
-            <td key={label} className="px-4 py-2">{value}</td>
-          );
-        })}
-      </tr>
-    ) : (
-      <tr>
-        <td colSpan="11" className="px-4 py-2 text-center">No docket info available.</td>
-      </tr>
-    )}
-  </tbody>
-</table>
+            <table className="w-full text-sm text-left text-gray-700 border-collapse">
+              <thead className="bg-gray-700 text-white">
+                <tr>
+                  <th className="px-4 py-2">AWB No.</th>
+                  <th className="px-4 py-2">Booking Date</th>
+                  <th className="px-4 py-2">Consignee Name</th>
+                  <th className="px-4 py-2">Destination</th>
+                  <th className="px-4 py-2">No. of Pieces</th>
+                  <th className="px-4 py-2">Status</th>
+                  <th className="px-4 py-2">Date & Time</th>
+                  <th className="px-4 py-2">Receiver Name</th>
+                  <th className="px-4 py-2">Forwarding No.</th>
+                  <th className="px-4 py-2">View POD</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Array.isArray(trackingData.docket_info) && trackingData.docket_info.length > 0 ? (
+                  <tr>
+                    {[
+                      { label: "AWB No.", jsonKey: "AWB No." },
+                      { label: "Booking Date", jsonKey: "Booking Date" },
+                      { label: "Consignee Name", jsonKey: "Consignee Name" },
+                      { label: "Destination", jsonKey: "Destination" },
+                      { label: "No. of Pieces", jsonKey: "pcs", fromRoot: true }, // added fromRoot flag
+                      { label: "Status", jsonKey: "Status" },
+                      { label: "Date & Time", jsonKey: "Delivery Date and Time" },
+                      { label: "Receiver Name", jsonKey: "Receiver Name" },
+                      { label: "Forwarding No.", jsonKey: "Forwarding No." },
+                      { label: "View POD", jsonKey: "pod_image" }
+                    ].map(({ label, jsonKey, fromRoot }) => {
+                      // Check if we're fetching from root or docket_info
+                      const value = fromRoot
+                        ? trackingData[jsonKey] || "N/A"  // Fetch from root if fromRoot is true
+                        : trackingData.docket_info.find(([key]) => key === jsonKey)?.[1] || "N/A"; // Otherwise, fetch from docket_info
+
+                      return (
+                        <td key={label} className="px-4 py-2">{value}</td>
+                      );
+                    })}
+                  </tr>
+                ) : (
+                  <tr>
+                    <td colSpan="11" className="px-4 py-2 text-center">No docket info available.</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
 
 
 

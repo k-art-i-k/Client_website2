@@ -7,7 +7,7 @@ import bg5 from "../assets/contract_logistics.webp"
 
 const AboutUs = () => {
   return (
-    <div className="font-roboto mt-20 md:mt-36">
+    <div className="font-roboto mt-16 md:mt-24">
       <div className="relative">
         <img
           alt="Yellow truck with company logo"
@@ -58,7 +58,7 @@ const AboutUs = () => {
       </div>
 
       {/* MediaCard divs with responsive styling */}
-      <div className="relative h-[60vh] md:h-[100vh] bg-gray-500 text-white p-6 sm:p-8 m-2 md:m-8"> 
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-500 text-white p-6 sm:p-8 m-2 md:m-8">
         <img
           src={bg1}
           alt="Background image related to courier shipment"
@@ -78,7 +78,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="relative h-[60vh] md:h-[100vh] bg-gray-500 text-white p-6 sm:p-8 m-2 md:m-8"> 
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-500 text-white p-6 sm:p-8 m-2 md:m-8">
         <img
           src={bg5}
           alt="Background image related to courier shipment"
@@ -98,7 +98,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="relative h-[60vh] md:h-[100vh] bg-gray-500 text-white p-6 sm:p-8 m-2 md:mx-8"> 
+      <div className="relative h-[60vh] md:h-[100vh] bg-gray-500 text-white p-6 sm:p-8 m-2 md:mx-8">
         <img
           src="https://storage.googleapis.com/a1aa/image/4mk94toZwV4wPBUhzCpNL6wcsyTw9VgjPlfqFSaHNyHetZqTA.jpg"
           alt="Background image related to courier shipment"

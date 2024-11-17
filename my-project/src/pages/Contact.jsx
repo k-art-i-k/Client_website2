@@ -46,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="font-roboto mt-20 md:mt-36 ">
+    <div className="font-roboto mt-16 md:mt-24 ">
       <div className="relative">
         {/* Background Image */}
         <img
