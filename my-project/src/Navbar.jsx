@@ -1,15 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "./assets/logo_img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation(); // Get the current location
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const isActive = (path) => location.pathname === path;
 
   return (
     <header className="fixed top-0 left-0 w-full text-white z-50 bg-white">
@@ -31,25 +34,29 @@ const Navbar = () => {
         <nav className="flex-1 hidden md:flex justify-center space-x-6">
           <Link
             to="/"
-            className="hover:text-red-500 px-4 border-r border-red-500 h-full flex items-center"
+            className={`px-4 border-r border-red-500 h-full flex items-center hover:text-red-500 ${isActive("/") ? "text-red-600" : ""
+              }`}
           >
             HOME
           </Link>
           <Link
             to="/about"
-            className="hover:text-red-500 px-4 border-r border-red-500 h-full flex items-center"
+            className={`px-4 border-r border-red-500 h-full flex items-center hover:text-red-500 ${isActive("/about") ? "text-red-600" : ""
+              }`}
           >
             ABOUT
           </Link>
           <Link
             to="/services"
-            className="hover:text-red-500 px-4 border-r border-red-500 h-full flex items-center"
+            className={`px-4 border-r border-red-500 h-full flex items-center hover:text-red-500 ${isActive("/services") ? "text-red-600" : ""
+              }`}
           >
             OUR SERVICES
           </Link>
           <Link
             to="/contact"
-            className="hover:text-red-500 px-4 border-r border-red-500 h-full flex items-center"
+            className={`px-4 h-full flex items-center hover:text-red-500 ${isActive("/contact") ? "text-red-600" : ""
+              }`}
           >
             CONTACT US
           </Link>
@@ -59,7 +66,8 @@ const Navbar = () => {
         <div className="pr-6 hidden md:block">
           <Link
             to="/tracking"
-            className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md"
+            className={`bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md ${isActive("/tracking") ? "text-red-600" : ""
+              }`}
           >
             TRACKING
           </Link>
@@ -69,20 +77,44 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div className={`${menuOpen ? "block" : "hidden"} bg-black text-white md:hidden`}>
         <nav className="flex flex-col items-center">
-          <Link to="/" className="hover:bg-red-700 w-full text-center py-2" onClick={toggleMenu}>
+          <Link
+            to="/"
+            className={`hover:bg-red-700 w-full text-center py-2 ${isActive("/") ? "text-red-600" : ""
+              }`}
+            onClick={toggleMenu}
+          >
             HOME
           </Link>
-          <Link to="/about" className="hover:bg-red-700 w-full text-center py-2" onClick={toggleMenu}>
+          <Link
+            to="/about"
+            className={`hover:bg-red-700 w-full text-center py-2 ${isActive("/about") ? "text-red-600" : ""
+              }`}
+            onClick={toggleMenu}
+          >
             ABOUT
           </Link>
-          <Link to="/services" className="hover:bg-red-700 w-full text-center py-2" onClick={toggleMenu}>
+          <Link
+            to="/services"
+            className={`hover:bg-red-700 w-full text-center py-2 ${isActive("/services") ? "text-red-600" : ""
+              }`}
+            onClick={toggleMenu}
+          >
             OUR SERVICES
           </Link>
-          <Link to="/contact" className="hover:bg-red-700 w-full text-center py-2" onClick={toggleMenu}>
+          <Link
+            to="/contact"
+            className={`hover:bg-red-700 w-full text-center py-2 ${isActive("/contact") ? "text-red-600" : ""
+              }`}
+            onClick={toggleMenu}
+          >
             CONTACT US
           </Link>
-          {/* Tracking Button inside Mobile Menu */}
-          <Link to="/tracking" className="hover:bg-red-700 w-full text-center py-2" onClick={toggleMenu}>
+          <Link
+            to="/tracking"
+            className={`hover:bg-red-700 w-full text-center py-2 ${isActive("/tracking") ? "text-red-600" : ""
+              }`}
+            onClick={toggleMenu}
+          >
             TRACKING
           </Link>
         </nav>
