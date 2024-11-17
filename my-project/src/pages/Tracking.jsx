@@ -56,7 +56,7 @@ const TrackingPage = () => {
   };
 
   return (
-    <div className="bg-gray-800 font-roboto mt-16 md:mt-24">
+    <div className="bg-gray-100 font-roboto mt-16 md:mt-24">
       {/* Banner Section */}
       <div className="relative">
         <img

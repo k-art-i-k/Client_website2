@@ -20,14 +20,14 @@ const services = [
     id: 2,
     name: "International Services",
     description: <div>
-        <p>Our International operations takes your business to the next level with an array of products viz - export service of documents, packages , commercial exports and more.
+      <p>Our International operations takes your business to the next level with an array of products viz - export service of documents, packages , commercial exports and more.
 
-We cater to the demands of growing businesses which often require documents and packages to be delivered within the shortest possible time frames. We guarantee the fastest onforward connections from BOM gateway, with every single shipment being subject to thorough physical check of contents and paper works to pave way for a swift and secure delivery at the destination.
+        We cater to the demands of growing businesses which often require documents and packages to be delivered within the shortest possible time frames. We guarantee the fastest onforward connections from BOM gateway, with every single shipment being subject to thorough physical check of contents and paper works to pave way for a swift and secure delivery at the destination.
 
-With guaranteed on-time deliveries for time-critical international shipments that need immediate pick-up and door delivery, our export process can be customized to suit your requirement. We carry anything from documents to parcels of 500 grams with no upper limit on the weight / volume of the cargo.</p>
-<p>We employ the fastest modes of transportation to any global destination within the shortest time possible and here comes our own linehaul to major gateways and hubs in strategic stations offering our deliveries with no compromise on the quality. The direct linehaul shortens the transit time, therefore providing the shortest reach…</p> 
-<br />
-<p>Our strategic partnership with leading express companies span over every corner of the globe. Whatever your requirement may be , we are there to take care of the expectations with our star service with no compromise on quality.</p>
+        With guaranteed on-time deliveries for time-critical international shipments that need immediate pick-up and door delivery, our export process can be customized to suit your requirement. We carry anything from documents to parcels of 500 grams with no upper limit on the weight / volume of the cargo.</p>
+      <p>We employ the fastest modes of transportation to any global destination within the shortest time possible and here comes our own linehaul to major gateways and hubs in strategic stations offering our deliveries with no compromise on the quality. The direct linehaul shortens the transit time, therefore providing the shortest reach…</p>
+      <br />
+      <p>Our strategic partnership with leading express companies span over every corner of the globe. Whatever your requirement may be , we are there to take care of the expectations with our star service with no compromise on quality.</p>
     </div>,
     image: Image2,
   },
@@ -35,8 +35,8 @@ With guaranteed on-time deliveries for time-critical international shipments tha
     id: 3,
     name: "Freight / Dangerous / Critical Cargo Handling / Road Transport",
     description: <div>
-        <p>Our Road Transport services extend across the length and breadth of the nation and are the most economical mode of logistics with the assurance of on-times deliveries.</p>
-        <p>With the fleet of vehicle , you can be assured of safe, secure , smooth and dependable logistical experience with us. This includes handling of DGR shipments on FTL movements.</p>
+      <p>Our Road Transport services extend across the length and breadth of the nation and are the most economical mode of logistics with the assurance of on-times deliveries.</p>
+      <p>With the fleet of vehicle , you can be assured of safe, secure , smooth and dependable logistical experience with us. This includes handling of DGR shipments on FTL movements.</p>
     </div>,
     image: Image3,
   },
@@ -44,8 +44,8 @@ With guaranteed on-time deliveries for time-critical international shipments tha
     id: 4,
     name: "International Stations With Safe Line Haul",
     description: <div>
-        <p>We have our own direct line haul of express / courier shipments being flown to Qatar ( DOHA ) , UAE ( DUBAI ) , Singapore , Iran , & Iraq.</p>
-        <p>By doing so, we are able to cater to the needs of our esteemed clients with a short transit time , customs clearance & Deliveries.</p>
+      <p>We have our own direct line haul of express / courier shipments being flown to Qatar ( DOHA ) , UAE ( DUBAI ) , Singapore , Iran , & Iraq.</p>
+      <p>By doing so, we are able to cater to the needs of our esteemed clients with a short transit time , customs clearance & Deliveries.</p>
     </div>,
     image: Image4,
   },
@@ -53,9 +53,9 @@ With guaranteed on-time deliveries for time-critical international shipments tha
     id: 5,
     name: "Pune - Mumbai - Pune Direct Trucking",
     description: <div>
-        <p>We offer express trucking services between PUNE and Mumbai, thus opening a lot of access to the entire Maharastra , Vidharba region.</p>
-        <p>We are able to cater to the express / courier needs of our clients located in these areas with a 24 – 48 transit time .</p>
-        <p>We will be able to provide Warehouse to warehouse transportation services, and at the same time provide door deliveries to the consignee.</p>
+      <p>We offer express trucking services between PUNE and Mumbai, thus opening a lot of access to the entire Maharastra , Vidharba region.</p>
+      <p>We are able to cater to the express / courier needs of our clients located in these areas with a 24 – 48 transit time .</p>
+      <p>We will be able to provide Warehouse to warehouse transportation services, and at the same time provide door deliveries to the consignee.</p>
     </div>,
     image: Image5,
   },
@@ -63,9 +63,9 @@ With guaranteed on-time deliveries for time-critical international shipments tha
     id: 6,
     name: "Import Operations",
     description: <div>
-        <p>With our ever expanding network of agents, we are providing import services to our esteemed clientele.</p>
-        <p>We are able to provide import services from Bangladesh , Nepal , Taiwan , Thailand , Vietnam , China , Indonesia , Singapore and Sri Lanka.</p>
-        <p>We also align with other major players and import from world-wide stations. Attachments area</p>
+      <p>With our ever expanding network of agents, we are providing import services to our esteemed clientele.</p>
+      <p>We are able to provide import services from Bangladesh , Nepal , Taiwan , Thailand , Vietnam , China , Indonesia , Singapore and Sri Lanka.</p>
+      <p>We also align with other major players and import from world-wide stations. Attachments area</p>
     </div>,
     image: Image6,
   },
@@ -98,11 +98,10 @@ const ServicesPage = () => {
               <li key={service.id}>
                 <button
                   onClick={() => setSelectedService(service)}
-                  className={`w-full text-left px-6 py-3 rounded-md shadow-lg ${
-                    selectedService.id === service.id
+                  className={`w-full text-left px-6 py-3 rounded-md shadow-lg ${selectedService.id === service.id
                       ? "bg-red-500 text-white"
                       : "bg-red-200 text-red-500"
-                  } hover:bg-red-500 hover:text-white transition-colors duration-200`}
+                    } hover:bg-red-500 hover:text-white transition-colors duration-200`}
                 >
                   {service.name}
                 </button>
@@ -121,7 +120,7 @@ const ServicesPage = () => {
             />
           </div>
           <h2 className="text-3xl font-semibold mb-4">{selectedService.name}</h2>
-          <p className="text-white">{selectedService.description}</p>
+          <p className="text-black">{selectedService.description}</p>
         </div>
       </div>
     </div>
