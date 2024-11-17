@@ -30,14 +30,14 @@ const AboutUs = () => {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row gap-8 md:gap-12">
             <div className="flex flex-col md:pl-6 w-full">
-              <span className="text-white text-base md:text-xl font-bold uppercase">
+              <span className="text-black text-base md:text-xl font-bold uppercase">
                 Our solid background
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-4">
                 Get to know about{" "}
                 <b className="text-red-600 font-bold">V Win Express International</b>
               </h2>
-              <p className="mt-4 sm:mt-6 text-white text-sm sm:text-base md:text-lg leading-relaxed">
+              <p className="mt-4 sm:mt-6 text-black text-sm sm:text-base md:text-lg leading-relaxed">
                 Our vast array of express delivery solutions can solve any
                 challenge posed by today’s changing business environments. We
                 believe in innovation, reliability, and providing superior
