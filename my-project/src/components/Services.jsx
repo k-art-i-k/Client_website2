@@ -88,12 +88,7 @@ const ServicesSection = () => {
                     </div>
                 </div>
 
-                {/* Buttons Section */}
-                <div className="mt-8 flex  sm:flex-row justify-center gap-4">
-                    <Link to="/tracking" className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-md hover:bg-indigo-700">
-                        Join Now
-                    </Link>
-                </div>
+              
             </div>
         </div>
     );
