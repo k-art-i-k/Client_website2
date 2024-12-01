@@ -94,7 +94,7 @@ const Navbar = () => {
           <Link
             to="/tracking"
             className={`bg-indigo-800 hover:bg-indigo-800 text-white px-4 py-2 rounded-md ${
-              isActive("/tracking") ? "text-indigo-800" : ""
+              isActive("/tracking") ? "text-white" : ""
             }`}
           >
             TRACKING
