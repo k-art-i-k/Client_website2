@@ -76,7 +76,7 @@ const HeroSection = () => {
             <FaSearch className="text-gray-500 mr-2" />
             <input
               type="text"
-              placeholder="Enter Forwarding Number"
+              placeholder="Enter AWB Number"
               className="w-full text-sm sm:text-base focus:outline-none"
               value={forwardingNumber}
               onChange={(e) => setForwardingNumber(e.target.value)}

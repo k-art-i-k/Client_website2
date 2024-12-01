@@ -103,7 +103,7 @@ const TrackingPage = () => {
       <div className="mt-4 flex items-center border border-yellow-500 rounded-full px-4 sm:px-6 py-2 overflow-hidden">
         <input
           className="flex-grow outline-none text-gray-600 text-base px-2 overflow-ellipsis"
-          placeholder="Enter Forwarding Number"
+          placeholder="Enter AWB Number"
           type="text"
           value={forwardingNumber}
           onChange={(e) => setForwardingNumber(e.target.value)}
