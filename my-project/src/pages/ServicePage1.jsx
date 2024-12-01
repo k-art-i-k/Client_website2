@@ -75,7 +75,7 @@ const ServicesPage = () => {
   const [selectedService, setSelectedService] = useState(services[0]);
 
   return (
-    <div className="font-roboto mt-20 md:mt-36">
+    <div className="font-roboto mt-16 md:mt-24">
       {/* Top Image Section */}
       <div className="relative mb-12">
         <img
@@ -99,9 +99,9 @@ const ServicesPage = () => {
                 <button
                   onClick={() => setSelectedService(service)}
                   className={`w-full text-left px-6 py-3 rounded-md shadow-lg ${selectedService.id === service.id
-                      ? "bg-red-500 text-white"
-                      : "bg-red-200 text-red-500"
-                    } hover:bg-red-500 hover:text-white transition-colors duration-200`}
+                      ? "bg-indigo-500 text-white"
+                      : "bg-indigo-200 text-indigo-500"
+                    } hover:bg-indigo-500 hover:text-white transition-colors duration-200`}
                 >
                   {service.name}
                 </button>

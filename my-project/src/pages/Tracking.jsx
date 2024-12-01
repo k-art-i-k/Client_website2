@@ -88,7 +88,7 @@ const TrackingPage = () => {
           </div>
           <div className="flex-grow p-4 md:p-6 rounded-xl shadow-xl shadow-neutral-300">
             <h1 className="md:text-5xl text-3xl font-bold text-gray-800 text-center">
-              Track <span className="text-red-500">Your Shipment</span>
+              Track <span className="text-indigo-500">Your Shipment</span>
             </h1>
             <div className="mt-8 p-8 border border-gray-300 rounded-lg">
               <div className="flex items-center border border-yellow-500 rounded-full px-6 py-2">
@@ -111,13 +111,13 @@ const TrackingPage = () => {
               </div>
               <div className="flex justify-center mt-4">
                 <button
-                  className="w-1/2 md:w-1/3 bg-red-900 hover:bg-red-600 text-white py-2 rounded-full text-sm md:text-sm font-semibold"
+                  className="w-1/2 md:w-1/3 bg-indigo-900 hover:bg-indigo-600 text-white py-2 rounded-full text-sm md:text-sm font-semibold"
                   onClick={() => handleTrackOrder()}
                 >
                   {isLoading ? 'Loading...' : 'TRACK ORDER'}
                 </button>
               </div>
-              {error && <p className="text-red-600 text-center mt-4">{error}</p>}
+              {error && <p className="text-indigo-600 text-center mt-4">{error}</p>}
             </div>
           </div>
         </div>

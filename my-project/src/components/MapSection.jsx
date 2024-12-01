@@ -38,14 +38,7 @@ const MapSection = () => {
             </div>
 
             {/* Buttons */}
-            <div className="flex space-x-4 mt-8">
-                <button className="px-6 py-3 bg-gray-200 text-gray-800 rounded-md font-medium hover:bg-gray-300">
-                    Request Quote
-                </button>
-                <button className="px-6 py-3 bg-purple-600 text-white rounded-md font-medium hover:bg-purple-700">
-                    Join Now
-                </button>
-            </div>
+           
         </div>
     );
 };

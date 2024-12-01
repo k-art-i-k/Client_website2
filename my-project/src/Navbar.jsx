@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "./assets/logo_img.png";
+import logo from "./assets/logo_img.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation(); // Get the current location
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -14,13 +15,35 @@ const Navbar = () => {
 
   const isActive = (path) => location.pathname === path;
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 w-full text-white z-50 bg-white">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        location.pathname === "/" && !isScrolled
+          ? "bg-transparent text-black"
+          : "bg-yellow-400 text-black"
+      }`}
+    >
       {/* Upper menu */}
-      <div className="flex bg-yellow-400 text-black font-semibold items-center h-24 px-6 md:px-12">
+      <div className="flex items-center h-24 px-6 md:px-12">
         {/* Logo Section */}
-        <div className="flex items-center">
-          <img src={logo} alt="Company Logo" className="h-16 md:h-24 bg-white" />
+        <div className="flex items-center ">
+          <img src={logo} alt="Company Logo" className="h-16 rounded-lg md:h-20 md:rounded-lg " />
         </div>
 
         {/* Hamburger Icon (Mobile) */}
@@ -34,29 +57,33 @@ const Navbar = () => {
         <nav className="flex-1 hidden md:flex justify-center space-x-6">
           <Link
             to="/"
-            className={`px-4 border-r border-red-500 h-full flex items-center hover:text-red-500 ${isActive("/") ? "text-red-600" : ""
-              }`}
+            className={`px-4 border-r border-indigo-500 h-full flex items-center hover:text-indigo-500 ${
+              isActive("/") ? "text-indigo-800" : ""
+            }`}
           >
             HOME
           </Link>
           <Link
             to="/about"
-            className={`px-4 border-r border-red-500 h-full flex items-center hover:text-red-500 ${isActive("/about") ? "text-red-600" : ""
-              }`}
+            className={`px-4 border-r border-indigo-500 h-full flex items-center hover:text-indigo-500 ${
+              isActive("/about") ? "text-indigo-800" : ""
+            }`}
           >
             ABOUT
           </Link>
           <Link
             to="/services"
-            className={`px-4 border-r border-red-500 h-full flex items-center hover:text-red-500 ${isActive("/services") ? "text-red-600" : ""
-              }`}
+            className={`px-4 border-r border-indigo-500 h-full flex items-center hover:text-indigo-500 ${
+              isActive("/services") ? "text-indigo-800" : ""
+            }`}
           >
             OUR SERVICES
           </Link>
           <Link
             to="/contact"
-            className={`px-4 h-full flex items-center hover:text-red-500 ${isActive("/contact") ? "text-red-600" : ""
-              }`}
+            className={`px-4 h-full flex items-center hover:text-indigo-500 ${
+              isActive("/contact") ? "text-indigo-800" : ""
+            }`}
           >
             CONTACT US
           </Link>
@@ -66,8 +93,9 @@ const Navbar = () => {
         <div className="pr-6 hidden md:block">
           <Link
             to="/tracking"
-            className={`bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md ${isActive("/tracking") ? "text-red-600" : ""
-              }`}
+            className={`bg-indigo-800 hover:bg-indigo-800 text-white px-4 py-2 rounded-md ${
+              isActive("/tracking") ? "text-indigo-800" : ""
+            }`}
           >
             TRACKING
           </Link>
@@ -75,44 +103,53 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <div className={`${menuOpen ? "block" : "hidden"} bg-black text-white md:hidden`}>
+      <div
+        className={`${
+          menuOpen ? "block" : "hidden"
+        } bg-yellow-400 text-white md:hidden`}
+      >
         <nav className="flex flex-col items-center">
           <Link
             to="/"
-            className={`hover:bg-red-700 w-full text-center py-2 ${isActive("/") ? "text-red-600" : ""
-              }`}
+            className={`hover:bg-indigo-700 w-full text-center py-2 ${
+              isActive("/") ? "text-indigo-800" : ""
+            }`}
             onClick={toggleMenu}
           >
             HOME
           </Link>
           <Link
             to="/about"
-            className={`hover:bg-red-700 w-full text-center py-2 ${isActive("/about") ? "text-red-600" : ""
-              }`}
+            className={`hover:bg-indigo-700 w-full text-center py-2 ${
+              isActive("/about") ? "text-indigo-800" : ""
+            }`}
             onClick={toggleMenu}
           >
             ABOUT
           </Link>
           <Link
             to="/services"
-            className={`hover:bg-red-700 w-full text-center py-2 ${isActive("/services") ? "text-red-600" : ""
-              }`}
+            className={`hover:bg-indigo-700 w-full text-center py-2 ${
+              isActive("/services") ? "text-indigo-800" : ""
+            }`}
             onClick={toggleMenu}
           >
             OUR SERVICES
           </Link>
           <Link
             to="/contact"
-            className={`hover:bg-red-700 w-full text-center py-2 ${isActive("/contact") ? "text-red-600" : ""
-              }`}
+            className={`hover:bg-indigo-700 w-full text-center py-2 ${
+              isActive("/contact") ? "text-indigo-800" : ""
+            }`}
             onClick={toggleMenu}
           >
             CONTACT US
           </Link>
           <Link
             to="/tracking"
-            className={`hover:bg-red-700 w-full text-center py-2 ${isActive("/tracking") ? "text-red-600" : ""
-              }`}
+            className={`hover:bg-indigo-700 w-full text-center py-2 ${
+              isActive("/tracking") ? "text-indigo-800" : ""
+            }`}
             onClick={toggleMenu}
           >
             TRACKING

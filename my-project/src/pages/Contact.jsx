@@ -70,29 +70,29 @@ const Contact = () => {
       <div className="bg-gray-200">
         <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-12 p-8">
           {/* Phone Section */}
-          <div className=" p-8 md:p-12 rounded-lg shadow-xl  shadow-red-400  text-center w-full md:w-[28rem] h-auto flex flex-col items-center transition-transform transform hover:scale-105 shadow-xl  shadow-red-400 ">
-            <FaPhoneAlt className="text-4xl md:text-5xl text-red-600 mb-4" />
+          <div className=" p-8 md:p-12 rounded-lg shadow-xl  shadow-indigo-400  text-center w-full md:w-[28rem] h-auto flex flex-col items-center transition-transform transform hover:scale-105 shadow-xl  shadow-indigo-400 ">
+            <FaPhoneAlt className="text-4xl md:text-5xl text-indigo-600 mb-4" />
             <h2 className="text-2xl md:text-4xl font-bold">Phone</h2>
             <p className="text-gray-600 text-lg md:text-2xl font-bold mb-4">
               Contact us on our number
             </p>
-            <p className="text-red-600 text-md md:text-xl font-semibold mb-2">
+            <p className="text-indigo-600 text-md md:text-xl font-semibold mb-2">
               +91 9768703115
             </p>
-            <p className="text-red-600 text-md md:text-xl font-semibold">
+            <p className="text-indigo-600 text-md md:text-xl font-semibold">
               +91 9833066922
             </p>
           </div>
 
           {/* Email Section */}
-          <div className="bg-gray-100 p-8 md:p-12 rounded-lg shadow-xl  shadow-red-400 text-center w-full md:w-[28rem] h-auto flex flex-col items-center transition-transform transform hover:scale-105">
-            <FaEnvelope className="text-4xl md:text-5xl text-red-600 mb-4" />
+          <div className="bg-gray-100 p-8 md:p-12 rounded-lg shadow-xl  shadow-indigo-400 text-center w-full md:w-[28rem] h-auto flex flex-col items-center transition-transform transform hover:scale-105">
+            <FaEnvelope className="text-4xl md:text-5xl text-indigo-600 mb-4" />
             <h2 className="text-2xl md:text-4xl font-bold">Email</h2>
             <p className="text-gray-600 text-lg md:text-2xl font-bold mb-4">
               Contact us on our email
             </p>
 
-            <p className="text-red-600 text-md md:text-lg font-semibold">
+            <p className="text-indigo-600 text-md md:text-lg font-semibold">
               ops@v-winexpress.com <br />
               info@v-winexpress.com <br />
               vwinexpress@gmail.com
@@ -100,13 +100,13 @@ const Contact = () => {
           </div>
 
           {/* Address Section */}
-          <div className="bg-gray-100 p-8 md:p-12 rounded-lg shadow-xl  shadow-red-400 text-center w-full md:w-[28rem] h-auto flex flex-col items-center transition-transform transform hover:scale-105">
-            <FaMapMarkerAlt className="text-4xl md:text-5xl text-red-600 mb-4" />
+          <div className="bg-gray-100 p-8 md:p-12 rounded-lg shadow-xl  shadow-indigo-400 text-center w-full md:w-[28rem] h-auto flex flex-col items-center transition-transform transform hover:scale-105">
+            <FaMapMarkerAlt className="text-4xl md:text-5xl text-indigo-600 mb-4" />
             <h2 className="text-2xl md:text-4xl font-bold">Address</h2>
             <p className="text-gray-600 text-lg md:text-2xl font-bold mb-4">
               Visit us at our office
             </p>
-            <p className="text-red-600 text-md md:text-base font-semibold mb-2">
+            <p className="text-indigo-600 text-md md:text-base font-semibold mb-2">
               Bharateeya Kala Mandal, Ground Level, C/2- A , No:3, OM Nagar Near
               J.B.Nagar, Andheri East, Mumbai-400 099.
             </p>
@@ -123,7 +123,7 @@ const Contact = () => {
 
         {/* Contact Form */}
         <div className="w-full md:w-1/2 md:ml-10  md:mt-0">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center text-red-600">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center text-indigo-600">
             Send us a message
           </h2>
           <p className="text-center text-gray-600 mb-8">
@@ -146,7 +146,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Your Name"
                   className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  required
+                  requiindigo
                 />
               </div>
               <div>
@@ -164,7 +164,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Your Email"
                   className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  required
+                  requiindigo
                 />
               </div>
             </div>
@@ -183,7 +183,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Subject"
                 className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                required
+                requiindigo
               />
             </div>
             <div>
@@ -201,12 +201,12 @@ const Contact = () => {
                 placeholder="Your Message"
                 rows="5"
                 className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                required
+                requiindigo
               />
             </div>
             <button
               type="submit"
-              className="bg-red-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md  md:w-auto"
+              className="bg-indigo-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md  md:w-auto"
             >
               Send Message
             </button>

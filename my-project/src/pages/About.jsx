@@ -35,7 +35,7 @@ const AboutUs = () => {
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-4">
                 Get to know about{" "}
-                <b className="text-red-600 font-bold">V Win Express International</b>
+                <b className="text-indigo-500 font-bold">V Win Express International</b>
               </h2>
               <p className="mt-4 sm:mt-6 text-black text-sm sm:text-base md:text-lg leading-relaxed">
                 Our vast array of express delivery solutions can solve any
@@ -67,12 +67,12 @@ const AboutUs = () => {
           height="1080"
         />
         <div className="absolute inset-0 flex md:items-end md:justify-start items-end justify-center mb-6 mr-4 md:mr-0">
-          <div className="card bg-white bg-opacity-90 text-black border-t-8 border-red-500 p-2 md:p-8 rounded-lg shadow-lg max-w-lg transition delay-150 duration-300 hover:bg-red-500 hover:text-white">
+          <div className="card bg-white bg-opacity-90 text-black border-t-8 border-indigo-500 p-2 md:p-8 rounded-lg shadow-lg max-w-lg transition delay-150 duration-300 hover:bg-indigo-500 hover:text-white">
             <h1 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
-              <b className="border-b-4 border-red-500">Media</b>
+              <b className="">Domestic & eCommerce Courier Services:</b>
             </h1>
             <p className="mb-2 md:mb-4 text-base md:text-lg">
-              Get the latest updates on V Win Express International. Check out our videos, social media pages, and other related communication.
+            Specialized in time-sensitive deliveries and last-mile solutions across India.
             </p>
           </div>
         </div>
@@ -87,12 +87,12 @@ const AboutUs = () => {
           height="1080"
         />
         <div className="absolute inset-0 flex md:items-end md:justify-start items-end justify-center mb-6 mr-4 md:mr-0">
-          <div className="card bg-white bg-opacity-90 text-black border-t-8 border-red-500 p-2 md:p-8 rounded-lg shadow-lg max-w-lg transition delay-150 duration-300 hover:bg-red-500 hover:text-white">
+          <div className="card bg-white bg-opacity-90 text-black border-t-8 border-indigo-500 p-2 md:p-8 rounded-lg shadow-lg max-w-lg transition delay-150 duration-300 hover:bg-indigo-500 hover:text-white">
             <h1 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
-              <b className="border-b-4 border-red-500">Media</b>
+              <b className="">International Express Services to MENA Region:</b>
             </h1>
             <p className="mb-2 md:mb-4 text-base md:text-lg">
-              Get the latest updates on V Win Express International. Check out our videos, social media pages, and other related communication.
+            Expert logistics to UAE, KSA, Qatar, Bahrain, Oman, Kuwait, and Iran with express delivery.
             </p>
           </div>
         </div>
@@ -107,12 +107,12 @@ const AboutUs = () => {
           height="1080"
         />
         <div className="absolute inset-0 flex md:items-end md:justify-start items-end justify-center mb-6 mr-4 md:mr-0">
-          <div className="card bg-white bg-opacity-90 text-black border-t-8 border-red-500 p-2 md:p-8 rounded-lg shadow-lg max-w-lg transition delay-150 duration-300 hover:bg-red-500 hover:text-white">
+          <div className="card bg-white bg-opacity-90 text-black border-t-8 border-indigo-500 p-2 md:p-8 rounded-lg shadow-lg max-w-lg transition delay-150 duration-300 hover:bg-indigo-500 hover:text-white">
             <h1 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
-              <b className="border-b-4 border-red-500">Media</b>
+              <b className="">Freight and Import Operations:</b>
             </h1>
             <p className="mb-2 md:mb-4 text-base md:text-lg">
-              Get the latest updates on V Win Express International. Check out our videos, social media pages, and other related communication.
+            Comprehensive air, sea, and road freight solutions and global import assistance.
             </p>
           </div>
         </div>

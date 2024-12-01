@@ -1,31 +1,38 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import Anna from '../assets/anna.jpeg';
+import Joe from '../assets/Joe.jpeg';
+import Tom from '../assets/imgres.jpeg';
+
+
+
+
 
 const reviews = [
     {
         id: 1,
         name: "Tom DeLonge",
-        role: "CEO, Lexmark",
+        role: "Logistics Manager, Leading Manufacturing Firm",
         review:
-            "I am very satisfied with the services. Their team is very professional and efficient in completing our project on time and at a very affordable cost. The quality of their work is very good and I highly recommend this company for any construction project.",
-        image: "https://via.placeholder.com/100", // Replace with actual image URL
+           "V Win Express International’s seamless import solutions helped us streamline our global supply chain. Their MENA region expertise is unmatched!",
+        image: Tom,
     },
     {
         id: 2,
         name: "Anna Smith",
-        role: "Manager, BuildCorp",
+        role: "Owner, Online Retail Business",
         review:
-            "Fantastic work! The team delivered beyond our expectations and provided excellent support throughout the project.",
-        image: "https://via.placeholder.com/100", // Replace with actual image URL
+          "With V Win Express, we never worry about our eCommerce shipments. Their domestic courier service has been a perfect fit!",
+        image: Anna, 
     },
     {
         id: 3,
         name: "John Doe",
-        role: "Founder, ArchDesign",
+        role: "Operations Head, Pharmaceutical Company",
         review:
-            "Their professionalism and attention to detail are outstanding. I would recommend them to anyone looking for quality service.",
-        image: "https://via.placeholder.com/100", // Replace with actual image URL
+           "Their professionalism in handling critical cargo is remarkable. V Win Express ensures every shipment is secure and on time.",
+        image: Joe,
     },
 ];
 
@@ -44,13 +51,13 @@ const ReviewSlider = () => {
             <img
                 src={review.image}
                 alt={review.name}
-                className="w-20 h-20 rounded-full mx-auto border-4 border-yellow-400"
+                className="w-20 h-20 rounded-full  mx-auto border-4 border-yellow-400"
             />
         </div>
     ));
 
     return (
-        <div className="bg-gray-900 py-10 px-4 border-4 border-red-500">
+        <div className="bg-gray-900 py-10 px-4 border-4 border-indigo-500">
             <h2 className="text-yellow-400 text-2xl font-bold text-center mb-6">
                 What Our Client Says
             </h2>

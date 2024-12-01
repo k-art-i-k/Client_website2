@@ -15,7 +15,7 @@ import ScrollToTop from './scrollToTop';
 
 const App = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-white">
       <Router >
         <ScrollToTop /> {/* This ensures scrolling to top on route change */}
 
@@ -30,7 +30,6 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/tracking" element={<Tracking />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path='/contact1' element={<Contact1 />} />
 
           </Routes>
         </div>

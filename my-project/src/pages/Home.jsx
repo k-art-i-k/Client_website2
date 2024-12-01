@@ -17,7 +17,7 @@ const Home = () => {
       <Services />
       <ServicesSe />
       <AboutHome />
-      <Projects />
+      {/* <Projects /> */}
       <Reviews />
       <MapSection />
     </>

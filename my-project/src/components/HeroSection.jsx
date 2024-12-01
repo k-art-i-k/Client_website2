@@ -32,7 +32,7 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center lg:justify-between w-full gap-6">
         {/* Left Side: Text */}
         <div className="lg:w-1/2 text-center lg:text-left mt-20 lg:mt-56">
-          <h1 className="text-3xl mt-4 sm:text-4xl font-bold text-black mb-4">
+          <h1 className="text-3xl mt-4 sm:text-4xl md:text-6xl font-bold text-black mb-4">
             It's A Big World Out There, Go Explore!
           </h1>
         </div>
@@ -86,7 +86,7 @@ const HeroSection = () => {
           {/* Button */}
           <button
             onClick={handleTrack}
-            className="bg-blue-600 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow hover:bg-blue-700 transition text-sm sm:text-base"
+            className="bg-indigo-800 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow hover:bg-indigo-800 transition text-sm sm:text-base"
           >
             Track
           </button>

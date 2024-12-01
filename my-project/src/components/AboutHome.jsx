@@ -1,5 +1,5 @@
 import React from "react";
-import airplaneImage from "../assets/Aero.png"; // Replace with the actual airplane image file
+import airplaneImage from "../assets/Media.png"; // Replace with the actual airplane image file
 import signatureImage from "../assets/Sign.png"; // Replace with the actual signature image file
 
 const AboutUs = () => {
@@ -10,7 +10,7 @@ const AboutUs = () => {
                 <img
                     src={airplaneImage}
                     alt="Airplane"
-                    className="w-full max-w-[300px] sm:max-w-[70%] md:max-w-[70%] md:ml-80"
+                    className="w-full max-w-[300px] sm:max-w-[70%] md:max-w-[70%] md:ml-40"
                 />
             </div>
 
@@ -24,17 +24,7 @@ const AboutUs = () => {
                     <span className="text-black">of experience!</span>
                 </h1>
                 <p className="text-gray-600 text-base sm:text-lg mb-4 px-2 md:px-0">
-                    We have a team of experienced professionals who have been in the
-                    industry for over 25 years. Our contractors have a wealth of
-                    knowledge and skills that they have acquired over the years, making
-                    them experts in their field.
-                </p>
-                <p className="text-gray-600 text-base sm:text-lg mb-6 px-2 md:px-0">
-                    With 25 years of experience, our contractors have a deep
-                    understanding of industry standards and regulations. We ensure that
-                    all our projects comply with the latest safety and building codes,
-                    and that the final product meets or exceeds our client’s
-                    expectations.
+                At V Win Express International, we are committed to delivering excellence in logistics. Specializing in both domestic and international courier services, we ensure reliable, secure, and timely delivery solutions for businesses and individuals. From express shipments to MENA countries to air freight, sea freight, and critical cargo handling, our services are tailored to meet your unique logistics needs. With our robust import operations and direct trucking between Pune and Mumbai, we bring efficiency and trust to every delivery.
                 </p>
 
                 {/* Stats */}
@@ -54,7 +44,7 @@ const AboutUs = () => {
                 </div>
 
                 {/* Signature */}
-                <div className="flex justify-center md:justify-end">
+                <div className="flex justify-center items-center ml-14 md:justify-end">
                     <img
                         src={signatureImage}
                         alt="Signature"
