@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaHome, FaPlaneArrival, FaTruck, FaRoute, FaGlobe, FaBoxOpen } from "react-icons/fa";
 import Group from '../assets/Group.png';
 import { Link } from "react-router-dom";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import {motion} from 'framer-motion'
 
 const ServicesSection = () => {
+    useEffect(() => {
+        AOS.init({
+          duration: 1200,
+          easing: "ease-in-out-cubic",
+          once: true,
+        });
+      }, []);
     return (
         <div className="py-12 bg-white mt-4">
             <div className="max-w-6xl mx-auto">
                 {/* Title Section */}
-                <div className="flex items-center justify-between mb-6">
+                <motion.div  initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+               className="flex items-center justify-between mb-6">
                     <h2 className="text-3xl font-bold text-gray-800">
                         Services <span className="text-indigo-600">We Offer</span>
                     </h2>
@@ -17,12 +31,12 @@ const ServicesSection = () => {
                         alt="service-icon"
                         className="w-24 h-24 object-cover"
                     />
-                </div>
+                </motion.div>
 
                 {/* Cards Section */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" >
                     {/* Domestic Services */}
-                    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start">
+                    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start" data-aos="fade-up">
                         <FaHome className="text-indigo-600 text-4xl mb-4" />
                         <h3 className="text-lg font-semibold text-gray-800 mb-2">
                             Domestic Services
@@ -33,7 +47,7 @@ const ServicesSection = () => {
                     </div>
 
                     {/* Import Operations */}
-                    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start">
+                    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start" data-aos="fade-up">
                         <FaPlaneArrival className="text-indigo-600 text-4xl mb-4" />
                         <h3 className="text-lg font-semibold text-gray-800 mb-2">
                             Import Operations
@@ -44,7 +58,7 @@ const ServicesSection = () => {
                     </div>
 
                     {/* Pune - Mumbai - Pune Direct Trucking */}
-                    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start">
+                    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start" data-aos="fade-up">
                         <FaTruck className="text-indigo-600 text-4xl mb-4" />
                         <h3 className="text-lg font-semibold text-gray-800 mb-2">
                             Pune - Mumbai - Pune Direct Trucking
@@ -55,7 +69,7 @@ const ServicesSection = () => {
                     </div>
 
                     {/* International Stations with Safe Line Haul */}
-                    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start">
+                    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start" data-aos="fade-up">
                         <FaRoute className="text-indigo-600 text-4xl mb-4" />
                         <h3 className="text-lg font-semibold text-gray-800 mb-2">
                             International Stations with Safe Line Haul
@@ -66,7 +80,7 @@ const ServicesSection = () => {
                     </div>
 
                     {/* International Services */}
-                    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start">
+                    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start" data-aos="fade-up">
                         <FaGlobe className="text-indigo-600 text-4xl mb-4" />
                         <h3 className="text-lg font-semibold text-gray-800 mb-2">
                             International Services
@@ -77,7 +91,7 @@ const ServicesSection = () => {
                     </div>
 
                     {/* Freight / Dangerous / Critical Cargo Handling */}
-                    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start">
+                    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start" data-aos="fade-up">
                         <FaBoxOpen className="text-indigo-600 text-4xl mb-4" />
                         <h3 className="text-lg font-semibold text-gray-800 mb-2">
                             Freight / Dangerous / Critical Cargo Handling / Road Transport

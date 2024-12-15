@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Anna from '../assets/anna.jpeg';
 import Joe from '../assets/Joe.jpeg';
 import Tom from '../assets/imgres.jpeg';
+import Aos from "aos";
 
 
 
@@ -37,6 +38,13 @@ const reviews = [
 ];
 
 const ReviewSlider = () => {
+    useEffect(() => {
+        Aos.init({
+          duration: 1200,
+          easing: "ease-in-out-cubic",
+          once: true,
+        });
+      }, []);
     const responsive = {
         0: { items: 1 },
         768: { items: 1 },
@@ -57,7 +65,7 @@ const ReviewSlider = () => {
     ));
 
     return (
-        <div className="bg-gray-900 py-10 px-4 border-4 border-indigo-500">
+        <div className="bg-gray-900 py-10 px-4 border-4 border-indigo-500" data-aos='fade-up'>
             <h2 className="text-yellow-400 text-2xl font-bold text-center mb-6">
                 What Our Client Says
             </h2>

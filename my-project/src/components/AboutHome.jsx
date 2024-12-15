@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import airplaneImage from "../assets/Media.png"; // Replace with the actual airplane image file
 import signatureImage from "../assets/Sign.png"; // Replace with the actual signature image file
+import Aos from "aos";
 
 const AboutUs = () => {
+    useEffect(() => {
+        Aos.init({
+          duration: 1200,
+          easing: "ease-in-out-cubic",
+          once: true,
+        });
+      }, []);
     return (
         <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-8 md:py-12 bg-white">
             {/* Left Section - Airplane Image */}
-            <div className="flex-1 mb-6 md:mb-0">
+            <div className="flex-1 mb-6 md:mb-0" data-aos="fade-right">
                 <img
                     src={airplaneImage}
                     alt="Airplane"
@@ -15,7 +23,7 @@ const AboutUs = () => {
             </div>
 
             {/* Right Section - Content */}
-            <div className="flex-1 max-w-xl md:mr-36 text-center md:text-left">
+            <div className="flex-1 max-w-xl md:mr-36 text-center md:text-left" data-aos="fade-left">
                 <h2 className="text-lg font-bold text-gray-600 mb-2">
                     About Us
                 </h2>

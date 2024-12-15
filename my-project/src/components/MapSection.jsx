@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Map from '../assets/Map.png'
+import Aos from 'aos';
+import {motion} from 'framer-motion'
 
 const MapSection = () => {
+    useEffect(() => {
+        Aos.init({
+          duration: 1200,
+          easing: "ease-in-out-cubic",
+          once: true,
+        });
+      }, []);
     return (
-        <div className="bg-gray-100 flex flex-col items-center py-12">
+        <div className="bg-gray-100 flex flex-col items-center py-12" >
             {/* Title */}
-            <h2 className="text-center text-xl font-bold text-gray-800 mb-2">
+            <motion.h2
+            initial={{opacity:0, y:-50}}
+            whileInView={{opacity:1, y:0}}
+            viewport={{once:true}}
+            transition={{duration:1}}
+            className="text-center text-xl font-bold text-gray-800 mb-2">
                 You Name It! We Deliver There
-            </h2>
+            </motion.h2>
             <div className="w-16 h-1 bg-yellow-500 mx-auto mb-8"></div>
 
             {/* Map */}
-            <div className="relative w-full max-w-4xl">
+            <div className="relative w-full max-w-4xl" data-aos='fade-up'>
                 {/* Map image */}
                 <img
                     src={Map}// Replace with your map image path

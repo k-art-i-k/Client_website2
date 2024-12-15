@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Banner from "../assets/AboutBanner.jpg";
 import SkillsSection from "../components/SkillSection"; // Importing the SkillsSection component
 import bg1 from "../assets/about_bg1.jpg"
+import {motion} from "framer-motion"
+import {Helmet} from 'react-helmet'
 
 import bg5 from "../assets/contract_logistics.webp"
 
+
 const AboutUs = () => {
   return (
+<>
+<Helmet>
+        <title>About Us || V-Win</title>
+        <meta name="description" content="Learn about V-Win, a leading logistics company in the industry." />
+      </Helmet>
     <div className="font-roboto mt-16 md:mt-24">
       <div className="relative">
         <img
@@ -121,6 +129,7 @@ const AboutUs = () => {
       {/* SkillsSection component */}
       <SkillsSection />
     </div>
+</>
   );
 };
 

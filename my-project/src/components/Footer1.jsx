@@ -1,10 +1,18 @@
-import React from 'react';
+import Aos from 'aos';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1200,
+      easing: "ease-in-out-cubic",
+      once: true,
+    });
+  }, []);
   return (
     <footer className="bg-neutral-900 text-white py-10">
-      <div className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-20 max-w-screen-xl grid grid-cols-1 md:grid-cols-3 md:gap-28 gap-8">
+      <div className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-20 max-w-screen-xl grid grid-cols-1 md:grid-cols-3 md:gap-28 gap-8" data-aos="fade-up">
         
         {/* Latest News Section */}
         <div>
